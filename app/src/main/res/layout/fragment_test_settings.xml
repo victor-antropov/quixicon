@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="settingsModel"
+            type="com.quixicon.presentation.fragments.test.models.TestSettingsModel" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurfaceVariant"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_16">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:text="@string/test_select_collection"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingHorizontal="@dimen/dp_4">
+
+                    <Spinner
+                        android:id="@+id/spinner_collections"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:backgroundTint="@color/gray_60"
+                        android:spinnerMode="dropdown" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="@string/test_select_order"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingHorizontal="@dimen/dp_4">
+
+                    <Spinner
+                        android:id="@+id/spinner_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:backgroundTint="@color/gray_60"
+                        android:spinnerMode="dropdown" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:checked="@={settingsModel.usePart}"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/test_use_part"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="horizontal"
+                    android:visibility="@{settingsModel.usePartBlockVisibility}">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/test_use_part_split"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_spinner"
+                        android:paddingHorizontal="@dimen/dp_4">
+
+                        <Spinner
+                            android:id="@+id/spinner_part_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_40"
+                            android:backgroundTint="@color/gray_60"
+                            android:dropDownWidth="@dimen/dp_96"
+                            android:entries="@array/test_parts"
+                            android:spinnerMode="dropdown" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:orientation="horizontal"
+                    android:visibility="@{settingsModel.usePartBlockVisibility}">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/test_use_part_select"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_spinner"
+                        android:paddingHorizontal="@dimen/dp_4">
+
+                        <Spinner
+                            android:id="@+id/spinner_part_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_40"
+                            android:backgroundTint="@color/gray_60"
+                            android:dropDownWidth="@dimen/dp_96"
+                            android:spinnerMode="dropdown" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_known"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:checked="@={settingsModel.showKnown}"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/test_show_100"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_vertical_swipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:checked="@={settingsModel.verticalSwipe}"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/test_vertical_swipe"
+                    android:textColor="?attr/colorOnSurface" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_show_transcription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:checked="@={settingsModel.showTranscription}"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/test_show_transcription"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_play_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:checked="@={settingsModel.playQuestion}"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/test_play_question"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_not_shuffle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:checked="@={settingsModel.notShuffle}"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:text="@string/test_dont_shuffle"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginVertical="@dimen/dp_8"
+                    android:background="?attr/colorDivider" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:background="@drawable/bg_button_big_test"
+            android:text="@string/start_test"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            />
+
+    </LinearLayout>
+</layout>

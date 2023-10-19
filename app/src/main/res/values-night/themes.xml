@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Quixicon" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/violet</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorPrimaryVariant">@color/grape</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gray_20</item>
+        <item name="colorSecondaryVariant">@color/gray_30</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorSurface">@color/gray_20</item>
+        <item name="colorSurfaceVariant">@color/gray_30</item>
+        <item name="colorOnSurface">@color/gray_90</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/yellow_green</item>
+        <item name="android:colorBackground">@color/gray_30</item>
+        <item name="android:textColor">@color/gray_80</item>
+        <item name="colorOnBackground">@color/white</item>
+
+        <item name="colorBackground">@color/gray_10</item>
+
+        <item name="colorTestAccent">@color/orange_halloween</item>
+        <item name="colorTestAccentVariant">@color/orange_princeton</item>
+        <item name="colorTestAccentDark">@color/red_cg</item>
+
+        <item name="colorTestBgUp">@color/green_phthalo</item>
+        <item name="colorTestBgRight">@color/black_chocolate</item>
+        <item name="colorTestBgLeft">@color/licorice</item>
+        <item name="colorTestBgDown">@color/sienna_dark</item>
+
+        <item name="colorCardHeaderArrow">@color/gray_40</item>
+        <item name="colorCardFooter">@color/gray_20</item>
+        <item name="colorCardTextWord">@color/white</item>
+        <item name="colorCardTextPhonetics">@color/gray_70</item>
+
+        <item name="colorAccentWord">@color/yellow_green</item>
+        <item name="colorAccentPhrase">@color/green_persian</item>
+        <item name="colorAccentRule">@color/blue_cg</item>
+
+        <item name="colorDialogAccent">@color/gray_80</item>
+        <item name="colorDialogSurfaceVariant">@color/gray_30</item>
+
+        <item name="colorDivider">@color/gray_10</item>
+
+        <!--item name="bottomSheetDialogTheme">@style/ThemeOverlay.Quixicon.BottomSheetDialog</item-->
+        <item name="snackbarStyle">@style/SnackBarStyle</item>
+
+    </style>
+</resources>

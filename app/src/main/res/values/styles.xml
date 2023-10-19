@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Quixicon.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" >
+        <item name="android:textColor">@color/gray_60</item>
+    </style>
+
+    <style name="Theme.Quixicon.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
+    <!-- This configures the styles for the title within the Toolbar  -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorControlActivated">@color/orange_halloween</item>
+    </style>
+
+    <style name="Theme.Quixicon.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="thumbTint">@color/selector_switch_material_states</item>
+    </style>
+
+    <style name="ThemeOverlay.Quixicon.MaterialDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Quixicon.Dialog.Rounded</item>
+        <!--item name="colorSurface">?attr/colorSurface</item-->
+        <item name="windowMinWidthMajor">0dp</item>
+        <item name="windowMinWidthMinor">0dp</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/DialogBodyTextStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonStyle</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/DialogTitleTextStyle</item>
+    </style>
+
+    <style name="DialogBodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="DialogButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">?attr/colorDialogAccent</item>
+    </style>
+
+    <style name="DialogTitleTextStyle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:backgroundTint">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Quixicon.Dialog.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_8</item>
+    </style>
+
+    <style name="ThemeOverlay.Quixicon.BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Theme.Quixicon.BottomSheet</item>
+    </style>
+
+    <style name="Theme.Quixicon.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Quixicon.Dialog.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Quixicon.Dialog.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/dp_16</item>
+        <item name="cornerSizeTopLeft">@dimen/dp_16</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="SettingsTitle" parent="TextAppearance.AppCompat">
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:paddingBottom">@dimen/dp_16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dp_12</item>
+    </style>
+
+
+    <!--region TextInputLayout-->
+    <style name="Theme.Quixicon.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundColor">?android:attr/colorBackground</item>
+        <item name="boxStrokeColor">@color/selector_stroke_color</item>
+        <item name="hintTextColor">@color/selector_stroke_color</item>
+    </style>
+
+
+    <!--region TextInputEditText-->
+    <style name="Theme.Quixicon.TextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">256</item>
+        <item name="android:padding">@dimen/dp_12</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <style name="Theme.Quixicon.TextInputEditText.Text">
+        <item name="android:inputType">text</item>
+    </style>
+
+
+    <style name="Theme.Quixicon.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="tabTextColor">@color/gray_80</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorColor">?attr/colorTestAccent</item>
+        <item name="tabIndicatorHeight">@dimen/dp_4</item>
+        <item name="tabInlineLabel">true</item>
+    </style>
+
+
+    <style name="Theme.Quixicon.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:paddingEnd">@dimen/dp_16</item>
+        <item name="cornerRadius">@dimen/dp_8</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="strokeColor">?attr/colorDialogAccent</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">?attr/colorDialogAccent</item>
+    </style>
+
+
+    <style name="Theme.Quixicon.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:paddingEnd">@dimen/dp_16</item>
+        <item name="cornerRadius">@dimen/dp_8</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="test_parts">
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+    </integer-array>
+
+    <string-array name="test_time_limits">
+        <item>Unlimited</item>
+        <item>20 min</item>
+        <item>30 min</item>
+        <item>40 min</item>
+        <item>60 min</item>
+    </string-array>
+
+    <string-array name="test_count_limits">
+        <item>Unlimited</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+    </string-array>
+
+    <string-array name="init_collections">
+        <item>12000_uid.json</item>
+        <item>core_0_1000.json</item>
+        <item>core_1000_1000.json</item>
+        <item>170.json</item>
+        <item>50phrases.json</item>
+        <item>irregular.json</item>
+        <item>intro_en_ru.json</item>
+
+        <item>es_en_core.json</item>
+        <item>es_en_core_0_1000.json</item>
+        <item>es_en_core_1000_1000.json</item>
+        <item>es_en_intro.json</item>
+
+        <item>fr_en_core.json</item>
+        <item>fr_en_core_0_1000.json</item>
+        <item>fr_en_core_1000_1000.json</item>
+        <item>fr_en_intro.json</item>
+
+        <item>sv_en_core.json</item>
+        <item>sv_ru_core.json</item>
+        <item>sv_en_core_0_1000.json</item>
+        <item>sv_ru_core_0_1000.json</item>
+        <item>sv_en_core_1000_1000.json</item>
+        <item>sv_ru_core_1000_1000.json</item>
+        <item>sv_en_intro.json</item>
+        <item>sv_ru_intro.json</item>
+
+        <item>hi_numerals.json</item>
+        <item>hi_vowels.json</item>
+        <item>hi_vowel_signs.json</item>
+        <item>hi_consonants.json</item>
+    </string-array>
+
+    <string-array name="init_collections_multi">
+        <item>hi_numerals.json</item>
+        <item>hi_vowels.json</item>
+        <item>hi_vowel_signs.json</item>
+        <item>hi_consonants.json</item>
+        <item>fr_en_core_0_1000.json</item>
+        <item>es_en_core_0_1000.json</item>
+    </string-array>
+
+    <string-array name="lang_interface">
+        <item>en:English</item>
+        <item>ru:Russian</item>
+    </string-array>
+
+    <string-array name="lang_student_en_code" translatable="false">
+        <item>ru</item>
+    </string-array>
+
+    <string-array name="lang_student_es_code" translatable="false">
+        <item>en</item>
+    </string-array>
+
+    <string-array name="lang_student_fr_code" translatable="false">
+        <item>en</item>
+    </string-array>
+
+    <string-array name="lang_student_sv_code" translatable="false">
+        <item>en</item>
+        <item>ru</item>
+    </string-array>
+
+    <string-array name="lang_student_hi_code" translatable="false">
+        <item>en</item>
+    </string-array>
+
+    <string-array name="lang_student_default_code" translatable="false">
+        <item>en</item>
+        <item>ru</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>ar:Arabic</item>
+        <item>zh:Chinese</item>
+        <item>cs:Czech</item>
+        <item>en:English</item>
+        <item>fr:French</item>
+        <item>ka:Georgian</item>
+        <item>de:German</item>
+        <item>el:Greek</item>
+        <item>he:Hebrew</item>
+        <item>hi:Hindi</item>
+        <item>id:Indonesian</item>
+        <item>it:Italian</item>
+        <item>ja:Japanese</item>
+        <item>ne:Nepali</item>
+        <item>pt:Portuguese</item>
+        <item>ru:Russian</item>
+        <item>es:Spanish</item>
+        <item>pl:Polish</item>
+        <item>sv:Swedish</item>
+        <item>th:Thai</item>
+        <item>tr:Turkish</item>
+        <item>uk:Ukrainian</item>
+        <item>:Other</item>
+    </string-array>
+
+</resources>

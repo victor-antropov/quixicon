@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="cardModel"
+            type="com.quixicon.presentation.activities.cards.models.CardModel" />
+        <variable
+            name="editModel"
+            type="com.quixicon.presentation.activities.cards.models.CardEditModel" />
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="onLongClickListener"
+            type="android.view.View.OnLongClickListener" />
+        <import type="android.view.View" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/dp_8"
+    android:paddingStart="0dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
+        app:cardCornerRadius="@dimen/dp_8"
+        app:cardElevation="@dimen/dp_2"
+        android:onClick="@{onClickListener::onClick}"
+        onLongClickListener="@{onLongClickListener}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card_header">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_64"
+                android:text="@{cardModel.name}"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/arrowLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_translation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:text="@{cardModel.translation}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_rotation"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/arrowLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <FrameLayout
+                android:id="@+id/arrowRight"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="0dp"
+                android:visibility="@{editModel.swipeRightElementsVisibility}"
+                android:background="?attr/colorPrimaryVariant"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-5dp"
+                    app:srcCompat="@drawable/ic_right_white_24dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/arrowLeft"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="0dp"
+                android:background="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="@{editModel.swipeLeftElementsVisibility}"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-5dp"
+                    app:srcCompat="@drawable/ic_left_white_24dp" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:text="@{@string/template_percentages(cardModel.knowledge ?? 0)}"
+                app:layout_constraintEnd_toStartOf="@+id/iv_rotation"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_rotation"
+                android:layout_width="@dimen/dp_8"
+                android:layout_height="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@id/arrowRight"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                knowledgeTint="@{cardModel.knowledge}"
+                app:srcCompat="@drawable/bg_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:text="@{cardModel.subjectCode}"
+                android:visibility="@{(cardModel.showSubject &amp;&amp; editModel.showSubject) ? View.VISIBLE : View.GONE}"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toStartOf="@id/arrowRight"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:visibility="@{cardModel.copyIconVisibility}"
+                android:tint="?attr/colorPrimaryVariant"
+                app:layout_constraintEnd_toStartOf="@id/arrowRight"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_check_circle_24dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <FrameLayout
+        android:layout_width="@dimen/dp_3"
+        android:layout_height="0dp"
+        android:background="?attr/colorBackground"
+        android:backgroundTint="@{cardModel.accentColorAttribute}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

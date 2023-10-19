@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="collectionModel"
+            type="com.quixicon.presentation.activities.collections.models.CollectionModel" />
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="onLongClickListener"
+            type="android.view.View.OnLongClickListener" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/outerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_8">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/smallCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_4"
+            app:cardCornerRadius="@dimen/dp_8"
+            app:cardElevation="@dimen/dp_2"
+            android:onClick="@{onClickListener::onClick}"
+            onLongClickListener="@{onLongClickListener}"
+            strokeColor="@{collectionModel.strokeColorAttribute}"
+            app:strokeWidth="@dimen/dp_3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/collectionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_card_header"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@{collectionModel.name}"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textSize="@dimen/sp_18"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_subject"
+                    />
+
+                <TextView
+                    android:id="@+id/tvNumberRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@{@plurals/n_rules(collectionModel.qntRules, collectionModel.qntRules)}"
+                    android:textColor="?attr/colorAccentRule"
+                    android:visibility="@{collectionModel.qntRules > 0 ? View.VISIBLE : View.INVISIBLE}"
+                    app:layout_constraintStart_toEndOf="@+id/tvDivider2"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tvNumberWords"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@{@plurals/n_words(collectionModel.qntWords, collectionModel.qntWords)}"
+                    android:textColor="?attr/colorAccentWord"
+                    android:visibility="@{collectionModel.qntWords > 0 ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tvDivider1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_4"
+                    android:text="|"
+                    android:visibility="@{collectionModel.divider1Visibility}"
+                    app:layout_constraintStart_toEndOf="@+id/tvNumberWords"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tvDivider2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:paddingHorizontal="@dimen/dp_4"
+                    android:text="|"
+                    android:visibility="@{collectionModel.divider2Visibility}"
+                    app:layout_constraintStart_toEndOf="@+id/tvNumberPhrases"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tvNumberPhrases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@{@plurals/n_phrases(collectionModel.qntPhrases, collectionModel.qntPhrases)}"
+                    android:textColor="?attr/colorAccentPhrase"
+                    android:visibility="@{collectionModel.qntPhrases > 0 ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toEndOf="@+id/tvDivider1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <TextView
+                    android:id="@+id/tv_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{collectionModel.subjectCode}"
+                    android:visibility="@{collectionModel.subjectVisibility}"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_more"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="?android:attr/textColor"
+                    app:srcCompat="@drawable/ic_more_vert_black_24dp"
+                    android:visibility="@{collectionModel.iconVisibility}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</layout>
+

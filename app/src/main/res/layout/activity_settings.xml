@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="settingsModel"
+            type="com.quixicon.presentation.activities.settings.models.SettingsModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_toolbar"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/layout_app_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorSurfaceVariant"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_16">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    style="@style/SettingsTitle"
+                    android:text="@string/settings_ui" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="@string/lang_interface" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingHorizontal="@dimen/dp_4">
+
+                    <Spinner
+                        android:id="@+id/spinner_language_interface"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:entries="@array/test_parts"
+                        android:backgroundTint="@color/gray_60"
+                        android:spinnerMode="dropdown" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:textColor="?attr/colorOnSurface"
+                    android:checked="@={settingsModel.darkMode}"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="@string/settings_use_dark" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_draw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:textColor="?attr/colorOnSurface"
+                    android:checked="@={settingsModel.drawOn}"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="@string/settings_draw_on" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_global"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:textColor="?attr/colorOnSurface"
+                    android:checked="@={settingsModel.showGlobal}"
+                    android:visibility="@{settingsModel.multiOptionsVisibility}"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="@string/settings_show_global" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="?attr/colorDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{settingsModel.multiOptionsVisibility}"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        style="@style/SettingsTitle"
+                        android:text="@string/settings_filter" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_filter_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        android:textColor="?attr/colorOnSurface"
+                        android:checked="@={settingsModel.useFilter}"
+                        android:paddingBottom="@dimen/dp_8"
+                        android:text="@string/settings_filter_subject" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        android:orientation="vertical"
+                        android:visibility="@{settingsModel.useFilterBlockVisibility}">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="?attr/colorOnSurface"
+                            android:text="@string/settings_target_language" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@drawable/bg_spinner"
+                            android:layout_marginBottom="@dimen/dp_16"
+                            android:paddingHorizontal="@dimen/dp_4">
+
+                            <Spinner
+                                android:id="@+id/spinner_subject_language"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:backgroundTint="@color/gray_60"
+                                android:spinnerMode="dropdown" />
+                        </FrameLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lang_student"
+                            android:textColor="?attr/colorOnSurface" />
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_spinner"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginBottom="@dimen/dp_16"
+                            android:paddingHorizontal="@dimen/dp_4">
+
+                            <Spinner
+                                android:id="@+id/spinner_student_language"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_40"
+                                android:backgroundTint="@color/gray_60"
+                                android:spinnerMode="dropdown" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_16"
+                        android:background="?attr/colorDivider" />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    style="@style/SettingsTitle"
+                    android:text="@string/settings_notification" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="@string/settings_notification_description" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:textColor="?attr/colorOnSurface"
+                    android:checked="@={settingsModel.useNotifications}"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:text="@string/settings_use_notification" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:orientation="vertical"
+                    android:visibility="@{settingsModel.useNotificationsBlockVisibility}">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorOnSurface"
+                        android:text="@string/settings_notification_source" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:background="@drawable/bg_spinner"
+                        android:paddingHorizontal="@dimen/dp_4">
+
+                        <Spinner
+                            android:id="@+id/spinner_notifications_source"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+                            android:backgroundTint="@color/gray_60"
+                            android:spinnerMode="dropdown" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:visibility="@{settingsModel.sourceFixed ? View.VISIBLE : View.GONE}"
+                        android:textColor="?attr/colorOnSurface"
+                        android:text="@string/settings_source_select" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:visibility="@{settingsModel.sourceFixed ? View.VISIBLE : View.GONE}"
+                        android:background="@drawable/bg_spinner"
+                        android:paddingHorizontal="@dimen/dp_4">
+
+                        <Spinner
+                            android:id="@+id/spinner_collections"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+                            android:backgroundTint="@color/gray_60"
+                            android:spinnerMode="dropdown" />
+                    </FrameLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_start"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_32"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:textColor="?attr/colorDialogAccent"
+                        android:letterSpacing="0.02"
+                        app:iconPadding="@dimen/dp_16"
+                        app:iconTint="?attr/colorDialogAccent"
+                        android:text="@string/settings_notification_start"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_test"
+                        android:textAllCaps="false"
+                        />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="?attr/colorDivider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{settingsModel.version}"
+                    android:gravity="end"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_16"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

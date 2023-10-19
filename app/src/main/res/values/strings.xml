@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Quixicon 2</string>
+    <string name="app_title">Quixicon</string>
+
+    <string name="title_activity_main">Collections</string>
+
+    <string name="app_video">zCKmU_2GjvA</string>
+    <string name="tg_chat">vantropov</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_tests">Test</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_search">Search</string>
+    <string name="action_help">Help</string>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_app">About app</string>
+    <string name="title_activity_donation">Donation</string>
+
+    <!-- Акктивити разработчика -->
+    <string name="sample_data_base">Database Example</string>
+    <string name="clear">Clear</string>
+    <string name="add">Add</string>
+    <string name="delete_all">Delete all tables</string>
+
+    <!-- Navigation Titles -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_setup">Settings</string>
+    <string name="already_exist">This field is already exists</string>
+    <string name="is_empty">You have to fill this field</string>
+    <string name="collection_name">Collection name</string>
+    <string name="collection_description">Description</string>
+    <string name="add_collection">Create Collection</string>
+    <string name="create_your_collection">Create your collection</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Edit</string>
+    <string name="rename_collection">Rename collection</string>
+    <string name="update">Update</string>
+    <string name="install_collection">Install collection</string>
+    <string name="add_card">Add Card</string>
+    <string name="edit_card">Edit Card</string>
+    <string name="Original">Word</string>
+    <string name="Translation">Translation</string>
+    <string name="Transcription">Transliteration</string>
+    <string name="Context">Example</string>
+    <string name="Question">Question</string>
+    <string name="Answer">Answer</string>
+    <string name="Save">Save</string>
+    <string name="your_translation">Your Translation: </string>
+    <string name="have_to_translate">You have to fill this field</string>
+    <string name="correct_translation">Correct Translation: </string>
+    <string name="button_check">Check</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="version">Version</string>
+    <string name="open">Open</string>
+
+    <string name="delete_title">Confirm Delete</string>
+    <string name="delete_collection">You are going to delete the collection with all flashcards.</string>
+    <string name="delete_card">Do you want to delete the flashcard from this collection?</string>
+    <string name="delete_card_super">Are you sure you want to delete this flashcard from ALL collections?</string>
+
+    <string name="info_collections_title">Associated collections</string>
+
+    <plurals name="n_words">
+        <item quantity="zero" />
+        <item quantity="one">%1$d word</item>
+        <item quantity="two">%1$d words</item>
+        <item quantity="few">%1$d words</item>
+        <item quantity="many">%1$d words</item>
+        <item quantity="other">%1$d words</item>
+    </plurals>
+    <plurals name="n_phrases">
+        <item quantity="zero" />
+        <item quantity="one">%1$d phrase</item>
+        <item quantity="two">%1$d phrases</item>
+        <item quantity="few">%1$d phrases</item>
+        <item quantity="many">%1$d phrases</item>
+        <item quantity="other">%1$d phrases</item>
+    </plurals>
+    <plurals name="n_rules">
+        <item quantity="zero" />
+        <item quantity="one">%1$d rule</item>
+        <item quantity="two">%1$d rules</item>
+        <item quantity="few">%1$d rules</item>
+        <item quantity="many">%1$d rules</item>
+        <item quantity="other">%1$d rules</item>
+    </plurals>
+    <string name="all_words">All words</string>
+    <string name="all_phrases">All phrases</string>
+    <string name="all_rules">All rules</string>
+    <string name="word1">word</string>
+    <string name="phrase1">phrase</string>
+    <string name="rule1">rule</string>
+
+    <string name="extra_fields">Additional fields</string>
+
+
+    <!-- Боковое меню-->
+    <string name="features">• Create flash cards\n• Explore collections\n• Learn and test yourself</string>
+    <string name="menu_notifications">News</string>
+    <string name="menu_knowledge">Knowledge base</string>
+    <string name="menu_import">Import collections</string>
+    <string name="menu_language">Change languages</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_about">About app</string>
+    <string name="menu_donate">Donate to app development</string>
+    <string name="menu_review">Write a review on Google Play</string>
+    <string name="menu_video">Video tutorial</string>
+    <string name="menu_telegram">Ask a question</string>
+    <string name="menu_follow">Follow us</string>
+
+    <!--  Choose Languages-->
+    <string name="lang_title">Select Languages</string>
+    <string name="lang_study">You study:</string>
+    <string name="lang_interface">App language:</string>
+    <string name="lang_student">You know well:</string>
+    <string name="lang_target">Collection language</string>
+    <string name="lang_select">Select Language</string>
+    <string name="lang_error_msg_1">There is no language set for this collection. Text-to-speech function does not work. </string>
+    <string name="lang_error_msg_2">Your phone does not have a package for voice playback of the selected language (%s). Explore text-to-speech settings on your Android.</string>
+    <string name="lang_error_open">Open settings</string>
+    <string name="lang_select_later">Select later</string>
+    <string name="lang_select_no">Not selected</string>
+
+    <!-- CONTEXT MENU-->
+    <string name="context_delete">Delete</string>
+    <string name="context_edit">Edit</string>
+    <string name="context_edit_card">Edit</string>
+    <string name="context_set">Knowledge 100%</string>
+    <string name="context_reset">Knowledge 0%</string>
+    <string name="context_copy">Copy to&#8230;</string>
+    <string name="context_info">Information</string>
+    <string name="context_export">Save to file</string>
+
+    <!-- Donation -->
+    <string name="donation_info">If you like our app you can donate any amount.</string>
+    <string name="donation_thanks">Thank You!</string>
+    <string name="donation_thanks_great">Many thanks for your help!</string>
+
+    <!-- Notifications -->
+    <string name="default_notification_channel_id">Default Channel</string>
+    <string name="default_notification_channel_name">All notifications</string>
+    <string name="notification_install">Add Collection</string>
+    <string name="notification_install_message">Are you sure you want to add this collection?</string>
+    <string name="notification_delete">Delete</string>
+    <string name="notification_delete_message">Are you sure you want to delete this?</string>
+    <string name="notification_read_more">More…</string>
+
+    <string name="notification_inactive">It\'s a good day to learn new words!</string>
+    <plurals name="notification_news">
+        <item quantity="zero" />
+        <item quantity="one">%1$d new collection is available to you.</item>
+        <item quantity="two">%1$d new collections are available to you</item>
+        <item quantity="few">%1$d new collections are available to you</item>
+        <item quantity="many">%1$d new collections are available to you</item>
+        <item quantity="other">%1$d new collections are available to you</item>
+    </plurals>
+
+    <string name="notification_question">Do you know the translation (answer)? </string>
+    <string name="notification_correct">Yes</string>
+    <string name="notification_wrong">No</string>
+    <string name="notification_position">Quick test — %d / %d</string>
+    <string name="notification_info_title">Quick test helps you study</string>
+    <string name="notification_info_message">You can disable it in the app settings</string>
+    <string name="notification_info_about">About Quick Test</string>
+
+    <!-- CATALOG ACTIVITY -->
+    <string name="catalog_copy">Copy to:</string>
+    <string name="search_hint">Search</string>
+    <string name="swipe_edit">Enable swipe edit of cards</string>
+    <string name="copy_to">If you swipe the card to the right, it will be copied to</string>
+    <string name="select_action">Select an action for swiping cards to the left</string>
+    <string name="swipe_left">Swipe left</string>
+    <string name="swipe_right">Swipe right</string>
+    <string name="swipe_right_empty">Only the current collection exists. To copy, you need to create another one.</string>
+    <string name="catalog_empty">
+        <![CDATA[
+        <h3>You don\'t have any flash cards<br>in this collection</h3>
+        <p><br>Add cards manually<br>by clicking<br><a href="NEW_CARD"><img src="ic_add_box_purple_24dp"></a></p>
+        <p><br>or copy words from another collection</p>
+        ]]>
+    </string>
+    <string name="catalog_words_description">You can find here all words from all collections including Big Dictionary</string>
+    <string name="catalog_phrases_description">You can find here all phrases from all collections</string>
+    <string name="catalog_rules_description">You can find here all rules from all collections</string>
+
+    <string name="option_set_100">Set knowledge to 100%</string>
+    <string name="option_set_0">Set knowledge to 0%</string>
+    <string name="option_delete">Delete it</string>
+
+    <!-- IMPORT -->
+    <string name="title_activity_import">Import Collections</string>
+    <string name="tab_text_1">Basic</string>
+    <string name="tab_text_2">Premium</string>
+    <string name="import_server">Download collections from server</string>
+    <string name="import_file">Install collection from *.csv file</string>
+    <string name="import_file_help_message">You can create a file with your collection on your computer and install it. Learn more on our website.</string>
+    <string name="import_file_help_visit">Visit quixicon.com</string>
+    <string name="import_file_help_url">http://quixicon.com/en/user-collection</string>
+    <string name="import_local_intro"><![CDATA[
+        For advanced users. Open *.csv file with your collection. Learn formatting rules at <a href="http://quixicon.com/en/user-collection">http://quixicon.com/en/user-collection</a>
+        ]]></string>
+    <string name="import_empty">There are no ready-made collections according to your parameters.\nContact us to speed this process up or create them yourself</string>
+    <string name="import_error_server">Something went wrong. Try again later.</string>
+    <string name="import_error_connection">Error connecting to the server. Check your internet connection and refresh this page</string>
+    <string name="import_error_collection">Server Error. Cannot find the specified collection.</string>
+
+    <string name="import_filter">Filter collections</string>
+    <string name="import_no_filter">All languages</string>
+
+    <string name="import_snack_delete">Collection removed</string>
+    <string name="import_snack_error">Error connecting to the server</string>
+    <string name="import_snack_ok">Collection installed</string>
+    <string name="import_snack_already">This collection is already installed</string>
+    <string name="import_snack_local_ok">Collection installed successfully</string>
+    <string name="import_snack_local_error">Incorrect format error</string>
+    <string name="import_repeat">Try again</string>
+
+
+    <!-- START ACTIVITY -->
+    <string name="start_continue">Next</string>
+    <string name="start_skip">Skip</string>
+    <string name="start_finish">Got it</string>
+    <string name="start_language">Выберите изучаемый язык и язык приложения. Эти настройки можно будет поменять позднее через меню.\n\nДля некоторых языков готовые коллекции могут не существовать или их может быть недостаточно. Если вам не хватет словарных карточек - создайте их самостоятельно или свяжитесь с авторами программы для ускорения работы.</string>
+    <string name="start_import">Сейчас вы можете установить с сервера доступные коллекции слов и выражений английского языка. Позже их можно будет удалить или установить другие через меню.</string>
+    <string name="start_server_error">Не удается подключиться к серверу. Убедитесь, что ваш телефон подключен к Интернету и нажмите кнопку "Обновить". Или пропустите этот шаг и установите коллекции позднее.</string>
+
+    <string name="start_1">Thank you for trying Quixicon.\nWe will help you expand your vocabulary in a foreign language</string>
+    <string name="start_1_know">You know well:</string>
+    <string name="start_1_app">App language:</string>
+    <string name="start_1_later">You can change it later</string>
+    <string name="start_1_wait">Setup is in progress… \nThis may take up to 30 seconds</string>
+
+    <string name="start_2">Create new collections and add flash cards for words, phrases and rules manually&#8230;</string>
+    <string name="start_3">&#8230; or import ready to use collections from our servers or from your local file.</string>
+    <string name="start_4">Test yourself and track your progress. Learned cards will come up in test less frequently.</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="main_empty">You don\'t have any collections\n at the moment.\nCreate your own or install a ready-made one.</string>
+    <string name="main_settings_msg">You can customize the filters and the app view in the \"Settings\" menu</string>
+    <string name="main_help_msg">Our app is easy to use, but it takes a few minutes to understand how it works. If you have questions, open the Help section from the side menu.</string>
+
+    <!-- START TEST -->
+    <string name="test_select_collection">Use the words from collection:</string>
+    <string name="test_select_order">I want to guess:</string>
+    <string name="test_use_part">Use only part of the collection</string>
+    <string name="test_use_part_split">Split into parts of</string>
+    <string name="test_use_part_select">Use part</string>
+    <string name="test_limit_length">Limit test length</string>
+    <string name="test_limit_count">By word count</string>
+    <string name="test_limit_time">By time</string>
+    <string name="test_show_100">Show flashcards with 100% knowledge</string>
+    <string name="test_show_transcription">Show transcription</string>
+    <string name="test_play_question">Voice questions</string>
+    <string name="start_test">LET\'S GO!</string>
+    <string name="test_result_caption">Test results</string>
+    <string name="test_result_correct">You know — %d</string>
+    <string name="test_result_wrong">Need to learn — %d</string>
+    <string name="test_result_rate">Your mark — %d%%</string>
+    <string name="test_retest">Continue testing</string>
+    <string name="test_setup">Start Test</string>
+    <string name="test_result_info">Your test results:</string>
+
+    <string name="test_dont_shuffle">Do not shuffle the flashcards</string>
+    <string name="test_vertical_swipe">Use vertical swipe for setting knowledge level to 100% (up) and 0% (down)</string>
+
+    <string name="test_wrong">Wrong</string>
+    <string name="test_right">Right</string>
+    <string name="test_swipe_left">Swipe left</string>
+    <string name="test_swipe_right">Swipe right</string>
+    <string name="test_swipe_up">Swipe up</string>
+    <string name="test_swipe_info">Evaluate your knowledge of this card</string>
+    <string name="test_draw">Draw answer</string>
+    <string name="test_finish">Finish test</string>
+    <string name="test_show_answer">Show the answer</string>
+
+    <string name="test_advice_title">Our Advice</string>
+    <string name="test_advice_message">Learn only the words you need: \n\n1. Create your own collection \n\n2. Copy the words you need from the main dictionary there \n\n3. Run a test on your collection \n</string>
+
+    <string name="test_order_translation">Translation</string>
+    <string name="test_order_original">Original language</string>
+    <string name="test_order_mixed">Mixed</string>
+
+    <string name="test_no_cards">There are no flashcards matching the test parameters</string>
+
+    <!-- App Rate -->
+    <string name="rate_start">Enjoying Quixicon?</string>
+    <string name="rate_rate">How about a rating on the Play Market, then?</string>
+    <string name="rate_feedback">Whould you mind giving us some feedback?</string>
+    <string name="rate_yes">Yes</string>
+    <string name="rate_no">Not really</string>
+    <string name="rate_ok">OK, sure</string>
+    <string name="rate_decline">No, thanks</string>
+    <string name="rate_thanks">Thank you for your feedback!</string>
+    <string name="rate_email">Choose an application for sending email!</string>
+
+    <!-- Video Help -->
+    <string name="video_help">If you need help please watch our tutorial video.</string>
+    <string name="video_yes">Watch</string>
+    <string name="video_no">No thanks</string>
+
+    <string name="help_about">
+        <![CDATA[
+<p><strong>Quixicon</strong> is an app made to help you expand your vocabulary in foreign languages using flash cards(<a href=\'http://quixicon.com/en/\'>http://quixicon.com/en</a>). It is completely <u>free</u>.</p>
+<p>Main principles:</p>
+<p>• 	The application is designed for self-education</p>
+<p>• 	Users can decide what words and phrases to study by making up their own collections. Fill them by creating flash cards one by one or by simply copying them from other collections.</p>
+<p>• 	You can test your knowledge of each collection. Decide yourself if your answer is correct.</p>
+<p>• 	Download premade collections from our server or prepare and import your own as a text file. Export collections from the app into a file.</p>
+
+<p>We have a lot of ideas to develop the app. Any of your support will be helpful.</p>
+
+<p><img src="ic_star_purple_24dp"></p>
+<p>If you like the app, please rate it on <a href="FEEDBACK">Google Play</a>.</p>
+<p><img src="ic_mail_purple_24dp"></p>
+
+<p>If you have any questions or suggestions, please contact us on the website: <br>  <a href=\'http://quixicon.com/en/contact-us/\'>http://quixicon.com/en/contact-us</a>.</p>
+<p><img src="ic_gift_purple_24dp"></p>
+
+<p>If you want to support the project, details are here:<br>  <a href=\'http://quixicon.com/en/donate-app/\'>http://quixicon.com/en/donate-app</a>.</p>
+<p><img src="ic_group_purple_24dp"></p>
+
+<p>If you want to help create collections of words for any language, please contact us.</p>
+        ]]>
+    </string>
+
+
+    <string name="help_brief">
+        <![CDATA[
+        <h2>Thank you for downloading the app!</h2>
+        <p>Flashcards contain a word/phrase, transcription and translation. They are a reliable way of memorizing foreign words and expressions. The card can also contain an example of the use of the word.</p>
+        <p><img src="card_en"></p>
+        <p>Cards are grouped into collections (sets of words or phrases). Below are examples of collections. They can be edited - cards can be deleted, added, moved from one collection to another.</p>
+        <p><img src="main_en"></p>
+        <p>You can select studied language in the side menu <img src="ic_menu_purple_24dp">. Collections created for one language are shown only when it’s selected.</p>
+        <p><img src="main_6_en"></p>
+        <p>You can create your own collections or import ready-made ones via the "Import Collections" in the side menu.</p>
+        <p>Cards can be easily copied from one collection to another.</p>
+        <p>You can test your knowledge of words and expressions from any collection. To do this, you need to press the orange button, which is always in the lower right corner of the screen:  <br> <img src="ic_knopka_test"></p>
+        <p>Free collections of words in different languages are available and more will be added with time.</p>
+        <p>If you need collections for languages that are not yet on the server, or you want to help us create them, send us an email: <a href="http://quixicon.com/en/contact-us">quixicon.com/en/contact-us</a></p>
+        ]]>
+    </string>
+
+    <string name="help_main">
+        <![CDATA[
+        <h3>Collection list</h3>
+        <p>Cards with words, phrases and rules are grouped into collections. The main screen displays a list of all collections.</p>
+        <p><img src="main_en"></p>
+        <p>All cards of the same type (word, phrase, rule) are combined into common collections: <strong>«All words»</strong>, <strong>«All phrases»</strong> and <strong>«All rules»</strong>.</p>
+        <p>Click on a collection to open it. A long press will bring up a context menu.</p>
+        <img src="main_5_en"><br/>
+        <p>Click on the orange button to start <strong>testing</strong>:<br>
+        <img src="ic_knopka_test"></p>
+        <p><strong>Top menu:</strong></p>
+        <img src="main_1"><br/><br/>
+• 	<img src="ic_menu_purple_24dp"> Open the main (side) menu<br/>
+• 	<img src="ic_library_add_purple_24dp"> Create a new empty collection<br/>
+• 	<img src="ic_help_purple_24dp"> Help entry for the current screen<br/>
+• 	<img src="ic_sort_purple_24dp"> Collections sorting order<br/>
+        <p><strong>Main Menu:</strong></p>
+        <img src="main_6_en"><br/><br/>
+•	Select the studied language and the interface language<br>
+•	Import ready-made collections from the server<br>
+• 	App information<br>
+• 	Help<br/>
+        ]]>
+    </string>
+
+    <string name="help_card">
+        <![CDATA[
+        <h2>Cards</h2>
+        <p>The card is an entry from the dictionary and it includes a word and translation (or a question - answer). It may additionally contain a transcription or the word in a sentence. Flashcards are used to learn words, phrases and rules, and for testing.</p>
+<p><strong>For ease of use, cards are divided into 3 types:</strong></p>
+• 	Word<br>
+• 	Phrase<br>
+• 	Rule (universal card with any question, on grammar knowledge for example)<br>
+
+<p><strong>The following card fields are supported:</strong></p>
+• 	Word / phrase / question<br>
+• 	Transcription<br>
+• 	Description / example<br>
+• 	Translation / answer<br>
+• 	Knowledge level (from 0 to 100%)<br><br>
+<img src="card_en"><br>
+        ]]>
+    </string>
+
+    <string name="help_collection">
+        <![CDATA[
+        <h3>Working with collections</h3>
+<p>Inside the collection all cards are shown in a column, like in the dictionary. When you click on them they open in the form of full cards.  You can scroll them forward or backward using the left and right arrows or by swiping.</p>
+<p><strong>Top Menu:</strong></p>
+<img src="catalog_1"><br/><br/>
+• 	<img src="ic_search_purple_24dp"> Search in the collection<br/>
+• 	<img src="ic_add_box_purple_24dp"> Add a card manually<br/>
+• 	<img src="ic_help_purple_24dp"> Help<br/>
+• 	<img src="ic_sort_purple_24dp"> Cards sorting order<br/>
+<p>Use the search and sort icons from the top menu to quickly find the words you want within the collection.</p>
+<p><img src="searchcard_en"></p>
+<p>Each card has a knowledge level set from 0 to 100%. It changes during testing - for each correct answer Quixicon adds 10%, for the wrong one it takes away the same amount. You can learn more in the “Testing” section.</p>
+<p><img src="catalog_2_en"></p>
+<p>To view the card, you need to click on it:</p>
+<p><img src="card_en"></p>
+<p>Long press on the card will bring up a context menu:</p>
+<img src="catalog_3_en"><br/><br/>
+<p>To start testing you need to press the orange button:<br> <img src="ic_knopka_test"></p>
+
+<h3>Swipe edit</h3>
+<p><strong>Swipe edit </strong> is an alternative way to manage cards in a collection, convenient for bulk copying, deleting, and setting knowledge level.
+After activating it, you need to select the actions performed when swiping <strong>LEFT</strong> and <strong>RIGHT</strong>.</p>
+<img src="catalog_4_en"><br/><br/>
+<p>Swiping <strong>right</strong> is used to copy a card to another collection. Destination collection is chosen by pressing purple field at the top.</p>
+<p>Swiping <strong>left</strong> is used to delete a card or set knowledge level to 0% or 100%.</p>
+        ]]>
+    </string>
+
+    <string name="help_test">
+        <![CDATA[
+        <h2>Testing</h2>
+        <p>You can test your knowledge of words and expressions from any collection. To start testing anywhere in the app, press the orange button:<br> <img src="ic_knopka_test"><br></p>
+        <p><strong>First, you will need to set the parameters:</strong></p>
+        <p>
+        •	Are you guessing a translation or an original word?<br>
+        •	Do you want split the collection into parts?<br>
+        •	Do you want to limit testing time and the number of words?<br>
+        </p>
+        <p><img src="starttest_en"></p>
+        <p>To start press the <strong>LET\'S GO!</strong> button.</p>
+        <p>You will see a word / phrase / question. <strong>Imagine</strong> the answer in your mind and <strong>touch the eye icon</strong> to view the answer.</p>
+        <p><img src="test_en"></p>
+	    <p>You will decide if your answer was correct. If it was - swipe the card right, if you were mistaken or just didn’t know – swipe left. There are also buttons at the bottom to use instead of swiping.</p>
+        <p>Each card has a knowledge level from 0 to 100%. The correct answer increases it by 10%, the wrong answer decreases it. Cards with a 100% rating are not shown in the test (but there’s an option to keep them). It is possible to manually set the level to 100% or reset it back to 0%.</p>
+        <p>You can exit the test at any time - your answers will still reflect in the statistics.</p>
+        ]]>
+    </string>
+
+    <!-- Разные снеки -->
+    <string name="snack_delete_card">Card removed</string>
+    <string name="snack_copy">Card copied</string>
+    <string name="snack_delete_collection">Collection removed</string>
+    <string name="snack_card_new">New card added</string>
+    <string name="snack_card_edit">Card changed</string>
+    <string name="snack_collection_new">New collection added</string>
+    <string name="snack_collection_edit">Collection changed</string>
+    <string name="snack_file_error">Error. Please check file access rights</string>
+    <string name="snack_collection_saved">Collection saved</string>
+
+
+    <!-- Пункты меню/сортировка-->
+    <string name="sort_abc">Alphabetically</string>
+    <string name="sort_date_desc">By date (new first)</string>
+    <string name="sort_date_asc">By date (old first)</string>
+    <string name="sort_default">Default</string>
+    <string name="sort_type">By card type</string>
+    <string name="sort_rate_asc">Knowledge (less first)</string>
+    <string name="sort_rate_desc">Knowledge (more first)</string>
+
+    <string name="template_percentages">%1$d%%</string>
+    <string name="template_transcription">[%s]</string>
+    <string name="template_collection_name">User Collection %d</string>
+
+    <string name="dialog_settings_message">Do you want to save changes?</string>
+    <string name="settings_use_dark">Use dark theme</string>
+    <string name="settings_draw_on">Draw answers possibility</string>
+    <string name="settings_show_global">Show global collections</string>
+    <string name="dialog_export_message">You are going to save collection \'%s\' as file \'Download\\%s\'</string>
+    <string name="settings_ui">User interface</string>
+    <string name="settings_notification">Notifications</string>
+    <string name="settings_use_notification">Ask questions in notifications </string>
+    <string name="settings_notification_source">Use the words from:</string>
+    <string name="settings_notification_description">We have a special feature - to check the knowledge of the word in notifications if you do not use the application. Just 5 words a day.</string>
+    <string name="settings_source_recent">Recent collection</string>
+    <string name="settings_source_fixed">Fixed collection</string>
+    <string name="settings_source_select">Select collection:</string>
+    <string name="settings_notification_start"><u>Run test in notification</u></string>
+    <string name="settings_filter">Filter</string>
+    <string name="settings_filter_subject">Filter collections by target language</string>
+    <string name="settings_target_language">Target language:</string>
+
+    <string name="card_copy_hint">Add the words you want to your collection by swiping the cards to the right</string>
+    <string name="card_copy_new">Create new flashcard</string>
+    <string name="card_copy_dictionary">Copy from dictionary</string>
+
+    <string name="hint_test">Test your knowledge</string>
+    <string name="hint_collection">Add more collections</string>
+    <string name="hint_swipe">Flashcard management mode</string>
+    <string name="hint_card">Add flashcards</string>
+    <string name="hint_help">For complete information about how the app works, see the Help section of the side menu.</string>
+    <string name="hint_action">Select actions for swiping cards</string>
+    <string name="hint_card_menu">Long press on the flashcard to open the context menu</string>
+
+    <string name="hint_test_settings">
+        <![CDATA[
+        <h3>Testing knowledge of words is the main study method</h3>
+        <p>Select a collection, testing parameters and get started.</p>
+        <p>You will see a word / phrase / question. <strong>Imagine</strong> the answer in your mind and <strong>touch the eye icon</strong> to view the answer.</p>
+	    <p>You will decide if your answer was correct. If it was - swipe the card right, if you were mistaken or just didn’t know – swipe left. There are also buttons at the bottom to use instead of swiping.</p>
+        ]]>
+    </string>
+    <string name="hint_test_process">
+        <![CDATA[
+        <h3>Testing knowledge of words is the main study method</h3>
+        <p>You will see a word / phrase / question. <strong>Imagine</strong> the answer in your mind and <strong>touch the eye icon</strong> to view the answer.</p>
+	    <p>You will decide if your answer was correct. If it was - swipe the card right, if you were mistaken or just didn’t know – swipe left. There are also buttons at the bottom to use instead of swiping.</p>
+        ]]>
+    </string>
+
+    <string name="intro_test">
+        <![CDATA[
+        <h3>Testing knowledge of words is the main study method</h3>
+        <p>To get acquainted, we will check the knowledge of <big><strong>10</strong></big> words from the starter collection.</p>
+        <h3>What to do?</h3>
+        <p>You will see a word / phrase / question. <strong>Imagine</strong> the answer in your mind and <strong>touch the eye icon</strong> to view the answer.<br><img src="test_en"></p>
+	    <p>You will decide if your answer was correct. If it was - swipe the card right, if you were mistaken or just didn’t know – swipe left. There are also buttons at the bottom to use instead of swiping.</p>
+        ]]>
+    </string>
+
+    <string name="intro_test_afterwords">You can create collections with the words and expressions that you need. Many premade collections are also available. </string>
+    <string name="intro_test_back">Next</string>
+
+    <string name="preview_dialog_title">Collection preview</string>
+    <string name="preview_dialog_message">Want to open a collection from an external link?</string>
+    <string name="preview_collection_installed">Collection already installed</string>
+
+    <string name="social_message">We regularly add new collections of words and phrases. Follow us on social networks.</string>
+    <string name="social_yes">Learn more</string>
+    <string name="social_no">Not now</string>
+
+    <!-- Book Activity -->
+    <string name="book_draw">Try to draw</string>
+    <string name="book_tts_init">Initializing text-to-speech…</string>
+
+</resources>

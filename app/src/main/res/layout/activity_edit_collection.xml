@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.quixicon.presentation.activities.editcollection.models.EditCollectionModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_toolbar"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/layout_app_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorBackground"
+            android:paddingTop="@dimen/dp_16"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp_32"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.Quixicon.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16">
+
+                    <com.quixicon.core.views.validatedtextview.ValidatedTextInputEditText
+                        android:id="@+id/et_name"
+                        style="@style/Theme.Quixicon.TextInputEditText.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/collection_name"
+                        android:imeOptions="actionNext"
+                        android:text="@={model.name}"
+                        android:ems="10"
+                        android:gravity="top|start"
+                        android:inputType="textLongMessage"
+                        android:lines="2"
+                        app:error="@string/is_empty"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:visibility="@{model.subjectVisibility}">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorOnSurface"
+                        android:text="@string/settings_target_language" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:background="@drawable/bg_spinner"
+                        android:layout_marginBottom="@dimen/dp_16"
+                        android:paddingHorizontal="@dimen/dp_4">
+
+                        <Spinner
+                            android:id="@+id/spinner_subject_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_40"
+                            android:backgroundTint="@color/gray_60"
+                            android:spinnerMode="dropdown" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.Quixicon.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16">
+
+                    <com.quixicon.core.views.validatedtextview.ValidatedTextInputEditText
+                        android:id="@+id/et_description"
+                        style="@style/Theme.Quixicon.TextInputEditText.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/collection_description"
+                        android:imeOptions="actionNext"
+                        android:text="@={model.description}"
+                        android:ems="10"
+                        android:gravity="top|start"
+                        android:inputType="textShortMessage|textMultiLine|textImeMultiLine"
+                        android:lines="5"
+                        android:singleLine="false"
+                        app:error="@string/is_empty"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_button_big"
+            android:text="@string/Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quixicon 2</string>
+    <string name="app_title">Quixicon</string>
+
+    <string name="title_activity_main">Коллекции</string>
+
+    <string name="app_video">h-rX6esDhGw</string>
+
+    <string name="action_settings">Настройки</string>
+    <string name="action_tests">Тестирование</string>
+    <string name="action_search">Найти слова</string>
+    <string name="action_help">Помощь</string>
+
+    <string name="title_activity_settings">Настройки</string>
+    <string name="title_activity_app">О приложении</string>
+    <string name="title_activity_donation">Помощь проекту</string>
+
+    <string name="sample_data_base">Пример базы данных</string>
+    <string name="clear">Очистить</string>
+    <string name="add">Добавить</string>
+    <string name="delete_all">Очистить все таблицы</string>
+
+    <string name="title_activity_setup">Настройки</string>
+
+    <string name="already_exist">Такое поле уже существует</string>
+    <string name="is_empty">Это поле не может быть пустым</string>
+    <string name="collection_name">Название коллекции</string>
+    <string name="collection_description">Описание коллекции</string>
+    <string name="add_collection">Создать коллекцию</string>
+    <string name="create_your_collection">Создать свою коллекцию</string>
+
+    <string name="delete">Удалить</string>
+    <string name="rename">Изменить</string>
+    <string name="rename_collection">Изменить описаниние</string>
+    <string name="update">Изменить</string>
+    <string name="install_collection">Установить коллекцию</string>
+    <string name="add_card">Добавить карточку</string>
+    <string name="edit_card">Редактировать карточку</string>
+
+    <string name="Original">Слово</string>
+    <string name="Translation">Перевод</string>
+    <string name="Transcription">Транскрипция</string>
+    <string name="Context">Пример использования</string>
+    <string name="Question">Вопрос</string>
+    <string name="Answer">Ответ</string>
+    <string name="Save">Сохранить</string>
+
+    <string name="your_translation">Your Translation: </string>
+    <string name="have_to_translate">You have to fill this field</string>
+    <string name="correct_translation">Correct Translation: </string>
+
+    <string name="button_check">Проверить</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="version">Версия</string>
+    <string name="open">Открыть</string>
+
+    <string name="delete_title">Подтвердждение удаления</string>
+    <string name="delete_collection">Колекция будет удалена вместе со всем связанными карточками. Карточки, свзанные с другими коллекциями, останутся в телефоне.</string>
+    <string name="delete_card">Карточка будет удалена из данной коллекции</string>
+    <string name="delete_card_super">Карточка будет удалена из ВСЕХ коллекции</string>
+
+    <string name="info_collections_title">Связанные коллекции</string>
+
+    <plurals name="n_words">
+        <item quantity="one">%d слово</item>
+        <item quantity="few">%d слова</item>
+        <item quantity="many">%d слов</item>
+        <item quantity="other">%d слов</item>
+    </plurals>
+
+    <plurals name="n_phrases">
+        <item quantity="one">%1$d фраза</item>
+        <item quantity="few">%1$d фразы</item>
+        <item quantity="many">%1$d фраз</item>
+        <item quantity="other">%1$d фраз</item>
+    </plurals>
+
+    <plurals name="n_rules">
+        <item quantity="one">%1$d правило</item>
+        <item quantity="few">%1$d правила</item>
+        <item quantity="many">%1$d правил</item>
+        <item quantity="other">%1$d правил</item>
+    </plurals>
+
+    <string name="all_words">Все слова</string>
+    <string name="all_phrases">Все фразы</string>
+    <string name="all_rules">Все правила</string>
+
+    <string name="word1">слово</string>
+    <string name="phrase1">фраза</string>
+    <string name="rule1">правило</string>
+
+    <string name="extra_fields">Дополнительные поля</string>
+    <string name="features">• Добавляйте карточки\n• Скачивайте коллекции\n• Проходите тесты</string>
+
+    <string name="menu_notifications">Новости</string>
+    <string name="menu_knowledge">Учебные материалы</string>
+    <string name="menu_import">Загрузить коллекции</string>
+    <string name="menu_language">Выбор языков</string>
+    <string name="menu_help">Справка</string>
+    <string name="menu_about">О приложении</string>
+    <string name="menu_donate">Донейшн на разработку</string>
+    <string name="menu_review">Оценить на Google Play</string>
+    <string name="menu_video">Видеообзор приложения</string>
+    <string name="menu_telegram">Написать нам</string>
+    <string name="menu_follow">Следить за новостями</string>
+
+    <!--  Choose Languages-->
+    <string name="lang_title">Выбор языков</string>
+    <string name="lang_study">Вы изучаете:</string>
+    <string name="lang_interface">Язык интерфеса приложения</string>
+    <string name="lang_student">Хорошо знаете:</string>
+    <string name="lang_target">Язык коллекции</string>
+    <string name="lang_select">Выбрать язык</string>
+    <string name="lang_error_msg_1">Для данной коллекции не установлен язык. Функциия синтеза речи не работает. </string>
+    <string name="lang_error_msg_2">На вашем телефоне не установлен пакет для голосового воспроизведения выбранного языка (%s). Посмотрите настройки синтеза речи в Android.</string>
+    <string name="lang_error_open">Открыть настройки</string>
+    <string name="lang_select_later">Выбрать позже</string>
+    <string name="lang_select_no">Не выбрано</string>
+
+    <!-- CONTEXT MENU-->
+    <string name="context_delete">Удалить</string>
+    <string name="context_edit">Изменить описание</string>
+    <string name="context_edit_card">Изменить</string>
+    <string name="context_set">Знание 100%</string>
+    <string name="context_reset">Знание 0%</string>
+    <string name="context_copy">Копировать в&#8230;</string>
+    <string name="context_info">Информация</string>
+    <string name="context_export">Сохранить в файл</string>
+
+    <!-- Donation -->
+    <string name="donation_info">Если вам нравится наше приложение, вы можете поддержать проект любой суммой.</string>
+    <string name="donation_thanks">Спасибо!</string>
+    <string name="donation_thanks_great">Большое спасибо за помощь!</string>
+
+    <!-- Notifications -->
+    <string name="default_notification_channel_name">Все оповещения</string>
+    <string name="notification_install">Добавить коллекцию</string>
+    <string name="notification_install_message">Вы точно хотите добавить эту коллекцию?</string>
+    <string name="notification_delete">Удалить</string>
+    <string name="notification_delete_message">Вы уверены?</string>
+    <string name="notification_read_more">Подробнее…</string>
+    <string name="notification_inactive">Хороший день для изучения слов!</string>
+    <plurals name="notification_news">
+        <item quantity="one">Появилась %1$d новая коллекция</item>
+        <item quantity="few">Появились %1$d новые коллекции</item>
+        <item quantity="many">Появилось %1$d новых коллекций</item>
+        <item quantity="other">Появилось %1$d новых коллекций</item>
+    </plurals>
+    <string name="notification_question">Вы знаете перевод (ответ)?</string>
+    <string name="notification_correct">Да</string>
+    <string name="notification_wrong">Нет</string>
+    <string name="notification_position">Быстрый тест — %d / %d</string>
+    <string name="notification_info_title">Быстрый тест помогает вам учиться</string>
+    <string name="notification_info_message">Отключить его можно в настройках приложения</string>
+    <string name="notification_info_about">Что это?</string>
+
+
+    <!-- CATALOG ACTIVITY -->
+    <string name="catalog_copy">Копировать:</string>
+    <string name="copy_to">Выбрите коллекцю, куда будут копироваться карточки при смахивании вправо</string>
+    <string name="select_action">Выберите действие над карточками при их смахивании влево</string>
+    <string name="search_hint">Поиск</string>
+    <string name="swipe_edit">Включить редактированиие смахиванием</string>
+    <string name="swipe_left">Смахнуть влево</string>
+    <string name="swipe_right">Смахнуть вправо</string>
+    <string name="swipe_right_empty">Существует только текущая коллекция. Для копирования вам нужно создать еще одну.</string>
+    <string name="catalog_empty">"\n        <![CDATA[
+       <h3>В этой коллекции<br>нет ни одной карточки</h3><p><br>Добавьте карточки вручную,<br>нажав на <br><a href="NEW_CARD"><img src="ic_add_box_purple_24dp"></a></p><p><br>или скопируйте слова из других коллекций</p>
+        ]]>\n    "</string>
+
+    <string name="option_set_100">Я знаю (100%)</string>
+    <string name="option_set_0">Я не знаю (0%)</string>
+    <string name="option_delete">Удалить</string>
+
+    <!-- IMPORT -->
+    <string name="title_activity_import">Загрузка коллекций</string>
+    <string name="tab_text_1">Основные</string>
+    <string name="tab_text_2">Премиум</string>
+    <string name="import_server">Готовые коллекции с сервера</string>
+    <string name="import_file">Установить коллекцию из CSV-файла</string>
+    <string name="import_file_help_message">Вы можете создать на компьютере файл со своей коллекцией и загрузить его. Формата файла описан на нашем сайте.</string>
+    <string name="import_file_help_visit">Перейти</string>
+    <string name="import_file_help_url">http://quixicon.com/usercollection</string>
+
+    <string name="import_error_server">Неполадки на сервере. Повторите попытку позднее.</string>
+    <string name="import_error_connection">Ошибка соединения с интернетом. Проверьте подключение и повторите попытку. </string>
+    <string name="import_error_collection">Ошибка на сервере. Не получается найти указанную коллекцию.</string>
+
+    <string name="import_empty">Нет готовых коллекций под ваши параметры.\nСвяжитесь с авторами для ускорения работ в создании коллекций или сделайте их самостоятельно</string>
+
+    <string name="import_filter">Фильтр коллекций</string>
+    <string name="import_no_filter">Все языки</string>
+    <string name="import_local_intro"><![CDATA[
+        Продвинутым пользователям. Загрузите файл *.csv cо своей коллекцией. Формат файла описан на <a href="http://quixicon.com/usercollection">http://quixicon.com/usercollection</a>
+        ]]></string>
+    <string name="import_snack_delete">Коллекция удалена</string>
+    <string name="import_snack_error">Ошибка соединения с сервером</string>
+    <string name="import_snack_local_error">Ошибка импорта коллекции</string>
+    <string name="import_snack_local_ok">Коллекция из файла загружена</string>
+    <string name="import_snack_ok">Коллекция загружена</string>
+    <string name="import_snack_already">Коллекция была установлена ранее</string>
+    <string name="import_repeat">Повторить</string>
+
+    <!-- START ACTIVITY -->
+    <string name="start_continue">Далее</string>
+    <string name="start_skip">Пропуск</string>
+    <string name="start_finish">К работе!</string>
+    <string name="start_language">Выберите изучаемый язык и язык приложения. Эти настройки можно будет поменять позднее через меню.\n\nДля некоторых языков готовые коллекции могут не существовать или их может быть недостаточно. Если вам не хватет словарных карточек - создайте их самостоятельно или свяжитесь с авторами программы для ускорения работы.</string>
+    <string name="start_import">Сейчас вы можете установить с сервера доступные коллекции слов и выражений английского языка. Позже их можно будет удалить или установить другие через меню.</string>
+    <string name="start_server_error">Не удается подключиться к серверу. Убедитесь, что ваш телефон подключен к Интернету и нажмите кнопку "Обновить". Или пропустите этот шаг и установите коллекции позднее.</string>
+
+    <string name="start_1">Спасибо, что установили Квиксикон.\nМы поможем вам расширить словарный запас иностранных языков</string>
+    <string name="start_1_know">Вы хорошо знаете:</string>
+    <string name="start_1_app">Язык интерфейса приложения:</string>
+    <string name="start_1_later">Эти настройки можно будет поменять позднее.</string>
+    <string name="start_1_wait">Идет настройка приложения… \nЭто может занять до 30 секунд.</string>
+
+    <string name="start_2">Создавайте новые коллекции и добавляете вручную карточки со словами, фразами и правилами&#8230;</string>
+    <string name="start_3">&#8230; или загружайте готовые коллекции с нашего сервера или из своих файлов.</string>
+    <string name="start_4">Тестируйте знания и отслеживайте прогресс в обучении. Изученные карточки будут показываться реже.</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="main_empty">У вас пока нет ни одной коллекции.\n Создайте свою или загрузите готовую.</string>
+    <string name="main_settings_msg">Вы можете настроить фильтры и внешний вид приложения в меню \"Настройки\"</string>
+    <string name="main_help_msg">Наше приложение удобно в использовании, но требует нескольких минут для понимания принципов работы.\n Если у вас возникнут вопросы - обратитесь к разделу \"Справка\" из бокового меню</string>
+
+    <!-- START TEST -->
+    <string name="test_select_collection">Брать вопросы из коллекции:</string>
+    <string name="test_select_order">Хочу отгадывать:</string>
+    <string name="test_use_part">Использовать часть коллекции</string>
+    <string name="test_use_part_split">Разбить на части по</string>
+    <string name="test_use_part_select">Выбрать часть</string>
+    <string name="test_limit_length">Ограничить продолжительность теста</string>
+    <string name="test_limit_count">По количеству карточек</string>
+    <string name="test_limit_time">По времени</string>
+    <string name="test_show_100">Показывать карточки с рейтином 100%</string>
+    <string name="start_test">ПОЕХАЛИ!</string>
+    <string name="test_result_caption">Результаты тестирования</string>
+    <string name="test_result_correct">Вы знаете — %d</string>
+    <string name="test_result_wrong">Нужно подучить — %d</string>
+    <string name="test_result_rate">Ваша оценка — %d%%</string>
+    <string name="test_retest">Продолжить тестирование</string>
+    <string name="test_setup">Начать тестирование</string>
+    <string name="test_result_info">Вы завершили тест со следующими результатами:</string>
+    <string name="test_wrong">Ошибка</string>
+    <string name="test_right">Верно</string>
+    <string name="test_swipe_left">Смахнуть\nвлево</string>
+    <string name="test_swipe_right">Смахнуть\nвправо</string>
+    <string name="test_swipe_up">Смахнуть\nвверх</string>
+    <string name="test_dont_shuffle">Не перемешивать карточки</string>
+    <string name="test_show_transcription">Показывать транскрипцию в вопросе</string>
+    <string name="test_play_question">Озвучивать вопросы</string>
+    <string name="test_vertical_swipe">Помечать смахиванием вверх очень легкие слова (знание 100%), а смахиванием вниз - очень трудные (0%)</string>
+
+    <string name ="test_advice_title">Полезный совет!</string>
+    <string name ="test_advice_message">Изучайте только необходимые вам слова:\n\n1. Создайте свою коллекцию\n\n2. Скопируйте туда нужные слова из основого словаря\n\n3. Запустите тест по своей коллекции\n</string>
+
+    <string name="test_order_translation">Перевод</string>
+    <string name="test_order_original">Исходный язык</string>
+    <string name="test_order_mixed">Смешанно</string>
+
+    <string name="test_no_cards">Нет карточек, удовлетворяющих параметрам теста</string>
+
+    <!-- App Rate -->
+    <string name="rate_start">Вам нравится Quixicon?</string>
+    <string name="rate_rate">Поставьте, пожалуйста, нам оценку на Play Market</string>
+    <string name="rate_feedback">Напишите, пожалуйста, что бы мы могли улучшить в приложении</string>
+    <string name="rate_yes">Да</string>
+    <string name="rate_no">Нет</string>
+    <string name="rate_ok">Хорошо</string>
+    <string name="rate_decline">Потом</string>
+    <string name="rate_thanks">Спасибо за обратную связь!</string>
+    <string name="rate_email">Выберите почтовое приложение</string>
+
+    <!-- Video Help -->
+    <string name="video_help">Нужна помощь? Посмотрите видеообзор приложения</string>
+    <string name="video_yes">Посмотреть</string>
+    <string name="video_no">Не нужно</string>
+
+    <string name="action_sort">Сортировка</string>
+    <string name="snack_card_edit">Карточка изменена</string>
+    <string name="snack_card_new">Новая карточка добавлена</string>
+    <string name="snack_collection_edit">Коллекция изменена</string>
+    <string name="snack_collection_new">Новая коллекция добавлена</string>
+    <string name="snack_collection_saved">Коллекция сохранена</string>
+    <string name="snack_copy">Карточка скопирована</string>
+    <string name="snack_delete_card">Карточка удалена</string>
+    <string name="snack_delete_collection">Коллекция удалена</string>
+    <string name="snack_file_error">Ошибка. Проверьте права доступа к файлам</string>
+    <string name="sort_abc">По алфавиту</string>
+    <string name="sort_date_asc">Старые по дате</string>
+    <string name="sort_date_desc">Новые по дате</string>
+    <string name="sort_default">По умолчанию</string>
+    <string name="sort_rate_asc">По знанию 0–100</string>
+    <string name="sort_rate_desc">По знанию 100–0</string>
+    <string name="sort_type">По типу карточки</string>
+    <string name="test_finish">Завершить тест</string>
+    <string name="test_draw">Рисовать</string>
+    <string name="test_swipe_info">Оцените свое знание этого слова</string>
+    <string name="catalog_phrases_description">Здесь собраны фразы из всех коллекций.</string>
+    <string name="catalog_rules_description">Здесь собраны правила из всех коллекций.</string>
+    <string name="catalog_words_description">Здесь собраны слова из всех коллекций, включая «Основной словарь».</string>
+    <string name="test_show_answer">Показать ответ</string>
+
+    <string name="help_about">
+        <![CDATA[
+<p><strong>Quixicon</strong> (Квиксикон)  —  это приложение для запоминания иностранных слов с помощью карточек (<a href=\'http://quixicon.com\'>http://quixicon.com</a>). Распространяется полностью <u>бесплатно</u>.</p>
+<p>Основные принципы:</p>
+<p>• 	Приложение рассчитано на самообразование и самостоятельную работу.</p>
+<p>• 	Пользователь сам формирует набор слов и выражений для изучения. Это можно сделать копируя карточки из стандартных коллекций или создавая карточки самостоятельно.</p>
+<p>• 	Можно создать неограниченное количество наборов слов (коллекций), разбив слова по темам, дате, актуальности на усмотрение пользователя.</p>
+<p>• 	Проверить выученные слова внутри каждой коллекции можно через тестирование. Оценку знания слова/ фразы пользователь производит самостоятельно, относя карточки к категориям «верно» или «неверно».</p>
+<p>• 	Можно устанавливать готовые  коллекции (наборы слов) с нашего сервера, подготовить коллекции в текстовом редакторе и загрузить файл в приложение или формировать коллекцию в приложении, создавая свои карточки вручную и копируя их из уже загруженных коллекций.</p>
+<p>У нас впереди еще много идей и работы по развитию приложения. Любая ваша поддержка будет нам полезна.</p>
+<p><img src="ic_star_purple_24dp"></p>
+<p>Если приложение вам понравилось – оцените его на <a href="FEEDBACK">Google Play</a>.</p>
+<p><img src="ic_mail_purple_24dp"></p>
+<p>Если есть вопросы и пожелания – пишите, сделаем приложение лучше. Смотрите контакты на сайте:<br>  <a href=\'http://quixicon.com/contact\'>http://quixicon.com/contact</a>.</p>
+<p><img src="ic_gift_purple_24dp"></p>
+<p>Если хотите поддержать проект, реквизиты здесь:<br>  <a href=\'http://quixicon.com/donate\'>http://quixicon.com/donate</a>.</p>
+<p><img src="ic_group_purple_24dp"></p>
+<p>В настоящий момент доступны для загрузки коллекции слов и выражений для английского языка. Если хотите помочь в создании коллекций слов для других языков – пишите, есть партнерская программа.</p>
+        ]]>
+    </string>
+
+
+    <string name="help_brief">
+        <![CDATA[
+        <h2>Спасибо, что скачали приложение!</h2>
+        <p>Карточки (flashcards), содержащие слово/фразу, транскрипцию и перевод, являются проверенным способом запоминания иностранных слов и выражений. Карточка может также содержать пример использования слова в речи.<br><img src="card"></p>
+        <p>Карточки объединяются в коллекции (наборы слов или фраз).  Ниже приведены примеры коллекций, каждая из которых может редактироваться – слова (карточки) могут удаляться, добавляться, перемещаться из коллекции в коллекцию.<br><img src="main"></p>
+        <p>Выбрать изучаемый язык можно в боковом меню <img src="ic_menu_purple_24dp">. Для каждого языка доступны  созданные для него коллекции.<br><img src="main_6"></p>
+        <p>Можно создать свои собственные коллекции слов или импортировать уже готовые через пункт бокового меню «Импорт коллекций».</p>
+        <p>Карточки (слова) можно легко копировать из одной коллекции в другую.</p>
+        <p>Знания слов и выражений  из любой коллекции можно проверить с помощью тестирования. Для этого нужно нажать оранжевую кнопку, которая всегда находится в правом нижнем углу экрана:  <br> <img src="ic_knopka_test"></p>
+        <p>Доступны бесплатные коллекции слов на разных языках, которые будут пополняться.</p>
+        <p>Если вам нужны коллекции для языков, которых еще нет на сервере, или вы хотите помочь в их создании – напишите нам на <a href="http://quixicon.com/contact">quixicon.com/contact</a></p>
+        ]]>
+    </string>
+
+    <string name="help_main">
+        <![CDATA[
+        <h3>Список коллекций</h3>
+        <p>Карточки со словами, фразами и правилами объединяются в коллекции. На главном экране отображается список всех коллекций.<br><img src="main"></p>
+        <p>Все карточки одного типа (слово, фраза, правило) объединены в общие коллекции: <strong>«Все слова»</strong>, <strong>«Все фразы»</strong> и <strong>«Все правила»</strong>.</p>
+        <p>Нажмите на коллекцию, чтобы перейти к ее изучению. Длинное нажатие на нужной коллекции вызовет меню.<br><img src="main_5"></p>
+        <p>Нажмите на оранжевую кнопку для начала <strong>тестирования</strong>:<br>
+        <img src="ic_knopka_test"></p>
+        <p><strong>Пункты верхнего меню</strong></p>
+        <img src="main_1"><br/><br/>
+• 	<img src="ic_menu_purple_24dp"> Вызов главного (бокового) меню<br/>
+• 	<img src="ic_library_add_purple_24dp"> Создание пустой (новой) коллекции<br/>
+• 	<img src="ic_help_purple_24dp"> Помощь (справка для работы с текущим экраном)<br/>
+• 	<img src="ic_sort_purple_24dp"> Сортировка коллекций<br/>
+        <p><strong>Пункты Главного меню</strong><img src="main_6"></p>
+•	Выбор изучаемого языка и языка интерфейса приложения<br>
+•	Импорт готовых коллекций с сервера<br>
+• 	Информация о приложении<br>
+• 	Вызов справки<br/>
+        ]]>
+    </string>
+
+    <string name="help_card">
+        <![CDATA[
+        <h2>Карточки</h2>
+        <p>Карточка представляет собой запись из словаря и обязательно включает в себя слово и перевод (или вопрос — ответ), а также дополнительно может содержать транскрипцию или пример употребления слова в речи. Карточки используются для изучения слов, выражений и правил, а также для прохождения тестирования.</p>
+<p><strong>Для удобства использования карточки делятся на 3 типа:</strong></p>
+• 	Слово<br>
+• 	Фраза<br>
+• 	Правило (Универсальная карточка с любыми вопросами, например, на знание грамматики)<br>
+
+<p><strong>Поддерживаются следующие поля карточки:</strong></p>
+• 	Слово/ фраза/вопрос<br>
+• 	Транскрипция<br>
+• 	Описание / пример применения<br>
+• 	Перевод/ответ<br>
+• 	Рейтинг знания (от 0 до 100%)<br><br>
+<img src="card"><br>
+        ]]>
+    </string>
+
+    <string name="help_collection">
+        <![CDATA[
+        <h3>Работа с коллекциями</h3>
+<p>Внутри коллекции показываются все карточки в привычном для словаря виде – столбиком. При нажатии на слова, они открываются в виде карточек, которые можно листать вперед или назад, используя стрелки вправо-влево или смахивание.</p>
+<p><strong>Верхнее меню</strong></p>
+<img src="catalog_1"><br/><br/>
+• 	<img src="ic_search_purple_24dp"> Поиск в коллекции<br/>
+• 	<img src="ic_add_box_purple_24dp"> Ручное добавление карточки<br/>
+• 	<img src="ic_help_purple_24dp"> Помощь<br/>
+• 	<img src="ic_sort_purple_24dp"> Сортировка<br/>
+<p>Используйте значки <strong>поиска</strong> и <strong>сортировки</strong> из верхнего меню для быстрого поиска нужных слов внутри этой коллекции.<br><img src="searchcard"></p>
+<p>У каждой карточки есть уровень её знания от 0 до 100%. Он меняется в процессе прохождения тестирования – за каждый правильный ответ Quixicon добавляет 10%, за неправильный отнимает столько же. Подробнее в разделе о тестировании.</p>
+<img src="catalog_2"><br/>
+<p>Для просмотра карточки нужно нажать на нее:<br><img src="card"></p>
+<p>Длительное нажатие на карточку вызовет меню:<br><img src="catalog_3"></p>
+<p>Для начала тестирования нужно нажать оранжевую кнопку:<br><img src="ic_knopka_test"></p>
+<h3>Редактирование смахиванием</h3>
+<p><strong>Редактирование смахиванием</strong> — альтернативный способ управления карточками в коллекции, удобный для массовых операций копирования, удаления и установки рейтинга знания.
+После его активизации нужно выбрать действия, выполняемые при смахивании <strong>ВЛЕВО</strong> и <strong>ВПРАВО</strong>.</p>
+<img src="catalog_4"><br/><br/>
+<p>Смахивание <strong>вправо</strong> используется для копирования  карточки в другую коллекцию. Доступен выбор конкретной коллекции, куда пользователь хочет скопировать карточку. Меню выбора открывается при нажатии на название текущей коллекции в синем поле. </p>
+<p>Смахивание <strong>влево</strong> используется для удаления карточки или установки рейтинга знания (в 0% или 100%).</p>
+        ]]>
+    </string>
+
+    <string name="help_test">
+        <![CDATA[
+        <h2>Тестирование</h2>
+        <p>Знания слов и выражений из любой коллекции можно проверить с помощью тестирования.
+        Для запуска тестирования в любом месте приложения нажмите оранжевую кнопку:<br><img src="ic_knopka_test"><br></p>
+        <p><strong>Для начала вам будет нужно выбрать опции прохождения теста:</strong></p>
+        <p>
+        •	Проверять знание перевода или оригинального языка.<br>
+        •	Выбрать опцию, если необходимо пройти тестирование не по всей коллекции, а лишь по конкретной ее части.<br>
+        •	Если необходимо, заранее ограничьте размер и время прохождения теста.<br>
+        </p>
+        <img src="starttest"><br/>
+        <p>Нажмите кнопку <strong>ПОЕХАЛИ!</strong></p>
+        <p>Вы видите слово на одном из языков. <strong>Представляете в уме</strong> ответ и <strong>касаетесь карточки</strong> для его просмотра.<br><img src="test"></p>
+	    <p>Вы сами принимаете решение о том, правильно ли ответили. Если правильно — смахиваете карточку вправо, неправильно — влево (есть дублирующие кнопки).</p>
+        <p>У каждой карточки есть рейтинг знания от 0 до 100%. Правильный ответ его увеличивает на 10%, неправильный — уменьшает. Карточки с рейтингом 100% в тесте не показываются. Есть возможность вручную установить рейтинг 100% или сбросить его до 0%.</p>
+        <p>Из режима тестирования можно выйти в любой момент — ваши ответы в любом случае будут учтены в статистике.</p>
+        ]]>
+    </string>
+
+    <string name="template_collection_name">Новая коллекция %d</string>
+
+    <string name="dialog_settings_message">Хотите сохранить внесенные изменения?</string>
+    <string name="settings_use_dark">Использовать тёмную тему</string>
+    <string name="settings_draw_on">Возможность рисования ответов</string>
+    <string name="settings_show_global">Отображать глобальные коллекции</string>
+    <string name="settings_ui">Интерфейс пользователя</string>
+    <string name="settings_notification">Уведомления</string>
+    <string name="settings_use_notification">Задавать вопросы в уведомлениях?</string>
+    <string name="settings_notification_source">Брать вопросы из:</string>
+    <string name="settings_notification_description">У нас есть специальная опция - проверять знание слов в уведомлениях, если вы не пользуетесь приложением. Всего 5 слов в день.</string>
+    <string name="settings_source_recent">Последняя коллекция</string>
+    <string name="settings_source_fixed">Выбранная коллекция</string>
+    <string name="settings_source_select">Выберите коллекцию:</string>
+    <string name="settings_notification_start"><u>Запустить тест в уведомлении</u></string>
+    <string name="settings_filter">Фильтр</string>
+    <string name="settings_filter_subject">Фильтровать коллекции по языку</string>
+    <string name="settings_target_language">Изучаемый язык:</string>
+
+    <string name="dialog_export_message">Коллекция \'%s\' будет сохранена в папке \'Download\' в файле \'%s\'</string>
+
+    <string name="card_copy_hint">Добавляйте нужные слова в свою коллекцию, смахивая карточки вправо</string>
+    <string name="card_copy_new">Создать новую карточку</string>
+    <string name="card_copy_dictionary">Скопировать из словаря</string>
+
+    <string name="hint_test">Проверить знание слов</string>
+    <string name="hint_collection">Добавить больше коллекций</string>
+    <string name="hint_swipe">Удобный режим управления карточками</string>
+    <string name="hint_card">Добавить карточки в коллекцию</string>
+
+    <string name="hint_help">За полной информацией о принципах работы приложения обратитесь к разделу \"Справка\" из бокового меню</string>
+    <string name="hint_action">Выбор действий для смахивания карточек влево и вправо</string>
+
+    <string name="hint_card_menu">Длинное нажатие на карточке вызовет контекстное меню</string>
+
+    <string name="hint_test_settings">
+        <![CDATA[
+        <h3>Тестирование — это основной метод обучения</h3>
+        <p>Выберите коллекцию, параметры тестирования и приступайте.</p>
+        <p>Мы показываем слово или вопрос. Вы <strong>представляете в уме</strong> перевод или ответ и <strong>касаетесь карточки</strong> для его просмотра.</p>
+	    <p>Вы сами принимаете решение о том, правильно ли ответили. Если правильно — смахиваете карточку вправо, неправильно — влево (есть дублирующие кнопки).</p>
+        ]]>
+    </string>
+
+    <string name="hint_test_process">
+        <![CDATA[
+        <h3>Тестирование — это основной метод обучения</h3>
+        <p>Мы показываем слово или вопрос. Вы <strong>представляете в уме</strong> перевод или ответ и <strong>касаетесь карточки</strong> для его просмотра.</p>
+	    <p>Вы сами принимаете решение о том, правильно ли ответили. Если правильно — смахиваете карточку вправо, неправильно — влево (есть дублирующие кнопки).</p>
+        ]]>
+    </string>>
+
+    <string name="intro_test">
+        <![CDATA[
+        <h3>Тестирование на знание слов — это основной метод обучения</h3>
+        <p>Для знакомства мы проверим знание <big><strong>10</strong></big> слов из стартовой коллекции.</p>
+        <h3>Что делать?</h3>
+        <p>Мы показываем слово или вопрос. Вы <strong>представляете в уме</strong> перевод или ответ и <strong>касаетесь карточки</strong> для его просмотра.</p>
+	    <p>Вы сами принимаете решение о том, правильно ли ответили. Если правильно — смахиваете карточку вправо, неправильно — влево (есть дублирующие кнопки).</p>
+        ]]>
+    </string>
+    <string name="intro_test_afterwords">Вы можете создавать коллекции с теми словами и выражениями, которые нужны именно вам.\n\nТакже вам доступно множество готовых коллекций.</string>
+    <string name="intro_test_back">Далее</string>
+
+    <string name="preview_dialog_title">Просмотреть коллекцию</string>
+    <string name="preview_dialog_message">Открыть коллекцию по внешней ссылке?</string>
+    <string name="preview_collection_installed">Коллекция уже установлена</string>
+
+    <string name="social_message">Мы регулярно добавляем новые коллекции со словами и фразами. Подписывайтесь на нас в социальных сетях, чтобы быть в курсе.</string>
+    <string name="social_yes">Подробнее</string>
+    <string name="social_no">Не сейчас</string>
+
+    <!-- Book Activity -->
+    <string name="book_draw">Рисовать</string>
+    <string name="book_tts_init">Инициализация произношения…</string>
+
+</resources>

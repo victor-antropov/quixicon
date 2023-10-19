@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="use_only_language">false</bool>
+    <bool name="start_intro">false</bool>
+    <bool name="social_networks">false</bool>
+    <bool name="draw_available">true</bool>
+    <bool name="enable_notifications">false</bool>
+    <string name="subject_code" translatable="false"/>
+    <bool name="show_super_collections">true</bool>
+</resources>

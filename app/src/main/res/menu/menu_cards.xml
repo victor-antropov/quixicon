@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="ru.victorblog.memorycards.CatalogActivity">
+
+    <item android:title="@string/action_sort"
+        android:id="@+id/action_sort"
+        android:orderInCategory="104"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_sort_white_24dp">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/action_sort_default"
+                    android:title="@string/sort_default"/>
+                <item
+                    android:id="@+id/action_sort_az"
+                    android:title="@string/sort_abc"/>
+                <item
+                    android:id="@+id/action_sort_date_desc"
+                    android:title="@string/sort_date_desc"/>
+                <item
+                    android:id="@+id/action_sort_date_asc"
+                    android:title="@string/sort_date_asc"/>
+                <item
+                    android:id="@+id/action_sort_rotation_asc"
+                    android:title="@string/sort_rate_asc"/>
+                <item
+                    android:id="@+id/action_sort_rotation_desc"
+                    android:title="@string/sort_rate_desc"/>
+                <item
+                    android:id="@+id/action_sort_type"
+                    android:title="@string/sort_type"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/add_card"
+        android:id="@+id/action_add"
+        android:orderInCategory="102"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_box_black_24dp">
+    </item>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/search_hint"
+        app:showAsAction="always"
+        android:orderInCategory="101"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <item android:title="@string/action_help"
+        android:id="@+id/action_help"
+        app:showAsAction="always"
+        android:orderInCategory="103"
+        android:icon="@drawable/ic_help_white_24dp"/>
+</menu>

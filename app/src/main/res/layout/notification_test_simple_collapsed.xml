@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_notification"
+        android:baselineAligned="false">
+
+        <FrameLayout
+            android:id="@+id/btn_wrong"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_button_notification_wrong">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_red_24dp"
+                android:layout_gravity="center_horizontal"
+                android:tint="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notification_wrong"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/white"
+                />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btn_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This is a cat"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/gray_60"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_16"
+                    />
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_60"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Это красивая сибирская кошка сидит у грязного окошка и лижет себе брюшко"
+                    />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/iv_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingEnd="@dimen/dp_8"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tint="@color/gray_70"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_visible"/>
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/btn_correct"
+            android:layout_width="@dimen/dp_40"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_button_notification_correct">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_green_24dp"
+                android:layout_gravity="center_horizontal"
+                android:tint="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notification_correct"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/white"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

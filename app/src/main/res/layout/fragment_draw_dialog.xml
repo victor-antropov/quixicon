@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="model"
+            type="com.quixicon.presentation.fragments.draw.models.DrawModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?attr/colorSurface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_8"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@{model.title}"
+                android:textColor="?attr/colorOnSurface"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/transparent"
+                android:tint="?attr/colorDialogAccent"
+                android:onClick="@{onClickListener::onClick}"
+                app:srcCompat="@drawable/ic_delete" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:tint="?attr/colorDialogAccent"
+                android:onClick="@{onClickListener::onClick}"
+                app:srcCompat="@drawable/ic_x" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/layout_original"
+            layout="@layout/layout_draw_hint"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{model.translationVisibility}"
+            android:text="@{model.hintTranslation}"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_8"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:background="?attr/colorDialogSurfaceVariant"
+            />
+
+        <FrameLayout
+            android:id="@+id/canvas_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

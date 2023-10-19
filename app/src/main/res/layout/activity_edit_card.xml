@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="cardModel"
+            type="com.quixicon.presentation.activities.editcard.models.EditCardModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_toolbar"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/layout_app_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorBackground"
+            android:paddingTop="@dimen/dp_16"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_12"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_word"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:onClick="@{cardModel::onClick}"
+                        android:background="@drawable/bg_button_word_outline"
+                        android:enabled="@{cardModel.wordBtnState}"
+                        android:text="@string/word1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/selector_btn_type_word" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_phrase"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:onClick="@{cardModel::onClick}"
+                        android:background="@drawable/bg_button_phrase_outline"
+                        android:text="@string/phrase1"
+                        android:enabled="@{cardModel.phraseBtnState}"
+                        android:textAllCaps="false"
+                        android:textColor="@color/selector_btn_type_phrase" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_rule"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:onClick="@{cardModel::onClick}"
+                        android:background="@drawable/bg_button_rule_outline"
+                        android:text="@string/rule1"
+                        android:enabled="@{cardModel.ruleBtnState}"
+                        android:textAllCaps="false"
+                        android:textColor="@color/selector_btn_type_rule"
+                        />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.Quixicon.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    >
+
+                    <com.quixicon.core.views.validatedtextview.ValidatedTextInputEditText
+                        android:id="@+id/et_original"
+                        style="@style/Theme.Quixicon.TextInputEditText.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Original"
+                        android:imeOptions="actionNext"
+                        android:text="@={cardModel.original}"
+                        android:ems="10"
+                        android:gravity="top|start"
+                        android:inputType="textLongMessage|textMultiLine|textImeMultiLine"
+                        android:lines="2"
+                        app:error="@string/is_empty" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.Quixicon.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    >
+
+                    <com.quixicon.core.views.validatedtextview.ValidatedTextInputEditText
+                        android:id="@+id/et_answer"
+                        style="@style/Theme.Quixicon.TextInputEditText.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Translation"
+                        android:imeOptions="actionNext"
+                        android:text="@={cardModel.translation}"
+                        android:ems="10"
+                        android:gravity="top|start"
+                        android:inputType="textLongMessage|textMultiLine|textImeMultiLine"
+                        android:lines="2"
+                        android:singleLine="false"
+                        app:error="@string/is_empty" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/semitransparent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:paddingVertical="@dimen/dp_8"
+                    android:checked="@={cardModel.extraFields}"
+                    android:text="@string/extra_fields" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.Quixicon.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:visibility="@{cardModel.extraFields ? View.VISIBLE : View.GONE}"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_transcription"
+                        style="@style/Theme.Quixicon.TextInputEditText.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Transcription"
+                        android:imeOptions="actionNext"
+                        android:text="@={cardModel.transcription}"
+                        android:ems="10"
+                        android:gravity="top|start"
+                        android:inputType="textLongMessage"
+                        android:lines="2" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.Quixicon.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:visibility="@{cardModel.extraFields ? View.VISIBLE : View.GONE}"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_description"
+                        style="@style/Theme.Quixicon.TextInputEditText.Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/Context"
+                        android:imeOptions="actionNext"
+                        android:text="@={cardModel.description}"
+                        android:ems="10"
+                        android:gravity="top|start"
+                        android:inputType="textLongMessage|textMultiLine|textImeMultiLine"
+                        android:lines="5"
+                        android:singleLine="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_button_big"
+            android:text="@string/Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

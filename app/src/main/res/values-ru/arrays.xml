@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="test_time_limits">
+        <item>Без ограничений</item>
+        <item>20 мин</item>
+        <item>30 мин</item>
+        <item>40 мин</item>
+        <item>60 мин</item>
+    </string-array>
+
+    <string-array name="test_count_limits">
+        <item>Без ограничений</item>
+        <item>25</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+    </string-array>
+
+    <string-array name="lang_interface">
+        <item>en:Английский</item>
+        <item>ru:Русский</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>en:Английский</item>
+        <item>ar:Арабский</item>
+        <item>el:Греческий</item>
+        <item>ka:Грузинский</item>
+        <item>he:Иврит</item>
+        <item>id:Индонезийский</item>
+        <item>es:Испанский</item>
+        <item>it:Итальянский</item>
+        <item>zh:Китайский</item>
+        <item>de:Немецкий</item>
+        <item>ne:Непальский</item>
+        <item>pl:Польский</item>
+        <item>pt:Португальский</item>
+        <item>ru:Русский</item>
+        <item>th:Тайский</item>
+        <item>tr:Турецкий</item>
+        <item>uk:Украинский</item>
+        <item>fr:Французский</item>
+        <item>hi:Хинди</item>
+        <item>cs:Чешский</item>
+        <item>sv:Шведский</item>
+        <item>ja:Японский</item>
+        <item>:Другой</item>
+    </string-array>
+
+</resources>

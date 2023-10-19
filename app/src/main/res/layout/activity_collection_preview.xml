@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="collectionModel"
+            type="com.quixicon.presentation.activities.collectionpreview.models.CollectionPreviewModel" />
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_toolbar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/Theme.Quixicon.AppBarOverlay"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/Theme.Quixicon.PopupOverlay" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="@{collectionModel.name}"
+                    android:visibility="@{collectionModel.nameVisibility}"
+                    android:textAppearance="@style/Toolbar.TitleText"
+                    android:textColor="?attr/colorOnPrimary" />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="?attr/colorBackground">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorSecondaryVariant"
+                    android:padding="@dimen/dp_16">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{collectionModel.description}"
+                        android:textColor="?attr/colorOnBackground"
+                        android:visibility="@{collectionModel.descriptionVisibility}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNumberRules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="@{@plurals/n_rules(collectionModel.qntRules, collectionModel.qntRules)}"
+                        android:textColor="?attr/colorAccentRule"
+                        android:visibility="@{collectionModel.qntRules > 0 ? View.VISIBLE : View.INVISIBLE}"
+                        app:layout_constraintStart_toEndOf="@+id/tvDivider2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNumberWords"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="@{@plurals/n_words(collectionModel.qntWords, collectionModel.qntWords)}"
+                        android:textColor="?attr/colorAccentWord"
+                        android:visibility="@{collectionModel.qntWords > 0 ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDivider1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        android:text="|"
+                        android:textColor="?attr/colorOnBackground"
+                        android:visibility="@{collectionModel.divider1Visibility}"
+                        app:layout_constraintStart_toEndOf="@+id/tvNumberWords"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDivider2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        android:text="|"
+                        android:textColor="?attr/colorOnBackground"
+                        android:visibility="@{collectionModel.divider2Visibility}"
+                        app:layout_constraintStart_toEndOf="@+id/tvNumberPhrases"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNumberPhrases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="@{@plurals/n_phrases(collectionModel.qntPhrases, collectionModel.qntPhrases)}"
+                        android:textColor="?attr/colorAccentPhrase"
+                        android:visibility="@{collectionModel.qntPhrases > 0 ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintStart_toEndOf="@+id/tvDivider1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="?attr/colorBackground"
+                    android:paddingTop="@dimen/dp_8"
+                    android:scrollbars="vertical"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_install"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/bg_button_big"
+                    android:text="@string/install_collection"
+                    android:visibility="@{collectionModel.installed ? View.GONE : View.VISIBLE}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <LinearLayout
+                    android:id="@+id/btn_forward"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@color/gray_60"
+                    android:visibility="@{collectionModel.installed ? View.VISIBLE : View.GONE}"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        app:textAllCaps="true"
+                        android:textSize="@dimen/sp_18"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="@string/preview_collection_installed"/>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="@dimen/dp_8"
+                        android:background="@color/yellow_green">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_right_white_24dp"
+                            />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_pb_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_50"
+            android:visibility="gone" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

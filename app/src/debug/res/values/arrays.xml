@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="init_collections">
+        <item>170.json</item>
+        <item>50phrases.json</item>
+        <item>irregular.json</item>
+        <item>intro_en_ru.json</item>
+
+        <item>es_en_core_0_1000.json</item>
+        <item>es_en_intro.json</item>
+
+        <item>fr_en_core_0_1000.json</item>
+        <item>fr_en_intro.json</item>
+
+        <item>sv_en_core_1000_1000.json</item>
+        <item>sv_ru_core_1000_1000.json</item>
+        <item>sv_en_intro.json</item>
+        <item>sv_ru_intro.json</item>
+
+        <item>hi_numerals.json</item>
+        <item>hi_vowels.json</item>
+        <item>hi_vowel_signs.json</item>
+        <item>hi_consonants.json</item>
+    </string-array>
+
+</resources>

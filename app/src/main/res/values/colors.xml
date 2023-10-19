@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- new style names  -->
+    <color name="transparent">#00000000</color>
+    <color name="semitransparent">#20000000</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="black">#000000</color>
+    <color name="gray_10">#121212</color>
+    <color name="gray_20">#212121</color>
+    <color name="gray_30">#2d2d2d</color>
+    <color name="gray_40">#4e4e51</color>
+    <color name="gray_60">#747474</color>
+    <color name="gray_70">#85878b</color>
+    <color name="gray_80">#E1E1E1</color>
+    <color name="gray_85">#EFEFEF</color>
+    <color name="gray_90">#F3F3F3</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="red_imperial">#ED1D35</color>
+    <color name="red_cg">#EF3C23</color>
+    <color name="orange_halloween">#F36821</color>
+    <color name="orange_princeton">#F58220</color>
+
+    <color name="violet">#8A2581</color>
+    <color name="grape">#7528AD</color>
+
+    <color name="green_deep_jungle">#004d40</color>
+    <color name="blue">#303f9f</color>
+
+    <color name="yellow_green">#8DC63F</color>
+    <color name="green_persian">#00A99D</color>
+    <color name="blue_cg">#0076A3</color>
+
+    <!-- Цвета исходной палитры, которые можно попробовать заменить основными-->
+    <!--color name="violet_variant">#84289E</color-->
+    <!--color name="grape_variant_dark">#6028C2</color-->
+    <!--color name="grape_variant_light">#7028B2</color-->
+    <color name="blue_palatinate">#4328DF</color>
+
+
+    <!-- Цвета для индикации направления смахивания в тесте-->
+    <color name="green_tea">#DCEDC8</color>
+    <color name="crayola">#AED581</color>
+    <color name="red_light">#FFCDD2</color>
+    <color name="pink_light_salmon">#EF9A9A</color>
+    <color name="black_chocolate">#171c11</color>
+    <color name="green_phthalo">#173211</color>
+    <color name="licorice">#1d1112</color>
+    <color name="sienna_dark">#401112</color>
+    <!-- -->
+
+
+    <!-- Цвета для индикации степени выученности -->
+    <color name="rotation1">#ED1D24</color>
+    <color name="rotation2">#F54719</color>
+    <color name="rotation3">#FD6F0E</color>
+    <color name="rotation4">#FF9305</color>
+    <color name="rotation5">#FFB503</color>
+    <color name="rotation6">#F3C000</color>
+    <color name="rotation7">#D8C000</color>
+    <color name="rotation8">#B6C000</color>
+    <color name="rotation9">#90B900</color>
+    <color name="rotation10">#66AF00</color>
+
+</resources>

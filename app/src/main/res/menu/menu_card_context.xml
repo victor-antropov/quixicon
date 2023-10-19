@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item_edit"
+        android:title="@string/context_edit_card"/>
+    <item
+        android:id="@+id/item_delete"
+        android:title="@string/context_delete"/>
+
+    <item
+        android:id="@+id/item_set_100"
+        android:title="@string/context_set"/>
+
+    <item
+        android:id="@+id/item_set_0"
+        android:title="@string/context_reset"/>
+
+    <item
+        android:id="@+id/item_copy"
+        android:title="@string/context_copy"/>
+
+    <item
+        android:id="@+id/item_info"
+        android:title="@string/context_info"/>
+
+</menu>

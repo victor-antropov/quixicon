@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="collectionModel"
+            type="com.quixicon.presentation.activities.collections.models.CollectionModel" />
+
+        <variable
+            name="editModel"
+            type="com.quixicon.presentation.activities.cards.models.CardsEditModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_toolbar"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/Theme.Quixicon.AppBarOverlay"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:expandedTitleGravity="top"
+                app:expandedTitleMarginEnd="10dp"
+                app:expandedTitleMarginStart="32dp"
+                app:expandedTitleMarginTop="50dp"
+                app:expandedTitleTextAppearance="@style/Toolbar.TitleText"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:title="Hello! My Name is Victor from Russia. I programming JAVA"
+                app:titleEnabled="false">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/Theme.Quixicon.PopupOverlay" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="1"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        android:text="@{collectionModel.name}"
+                        android:textAppearance="@style/Toolbar.TitleText"
+                        android:textColor="?attr/colorOnPrimary" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/colorSecondaryVariant"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{collectionModel.description}"
+                            android:textColor="?attr/colorOnBackground"
+                            android:visibility="@{collectionModel.descriptionVisibility}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNumberRules"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:text="@{@plurals/n_rules(collectionModel.qntRules, collectionModel.qntRules)}"
+                            android:textColor="?attr/colorAccentRule"
+                            android:visibility="@{collectionModel.qntRules > 0 ? View.VISIBLE : View.INVISIBLE}"
+                            app:layout_constraintStart_toEndOf="@+id/tvDivider2"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNumberWords"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:text="@{@plurals/n_words(collectionModel.qntWords, collectionModel.qntWords)}"
+                            android:textColor="?attr/colorAccentWord"
+                            android:visibility="@{collectionModel.qntWords > 0 ? View.VISIBLE : View.GONE}"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDivider1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:paddingHorizontal="@dimen/dp_8"
+                            android:text="|"
+                            android:textColor="?attr/colorOnBackground"
+                            android:visibility="@{collectionModel.divider1Visibility}"
+                            app:layout_constraintStart_toEndOf="@+id/tvNumberWords"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDivider2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:paddingHorizontal="@dimen/dp_8"
+                            android:text="|"
+                            android:textColor="?attr/colorOnBackground"
+                            android:visibility="@{collectionModel.divider2Visibility}"
+                            app:layout_constraintStart_toEndOf="@+id/tvNumberPhrases"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNumberPhrases"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:text="@{@plurals/n_phrases(collectionModel.qntPhrases, collectionModel.qntPhrases)}"
+                            android:textColor="?attr/colorAccentPhrase"
+                            android:visibility="@{collectionModel.qntPhrases > 0 ? View.VISIBLE : View.GONE}"
+                            app:layout_constraintStart_toEndOf="@+id/tvDivider1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRotation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:text="96%"
+                            android:textColor="?attr/colorOnBackground"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toStartOf="@+id/ivRotation"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivRotation"
+                            android:layout_width="@dimen/dp_8"
+                            android:layout_height="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                            app:srcCompat="@drawable/bg_circle" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/switchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorBackground"
+                android:foregroundGravity="right"
+                android:visibility="@{editModel.empty ? View.GONE : View.VISIBLE}"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_4">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/switchText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_8"
+                    android:paddingVertical="@dimen/dp_4"
+                    android:text="@string/swipe_edit"
+                    android:textColor="?attr/colorOnSurface"
+                    app:layout_constraintEnd_toStartOf="@+id/switch_mode"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_mode"
+                    style="@style/Theme.Quixicon.Switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="@dimen/dp_8"
+                    android:checked="@={editModel.swipeMode}"
+                    app:layout_constraintBottom_toBottomOf="@+id/switchText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/switchText"
+                    app:switchPadding="@dimen/dp_4" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_options"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_4"
+                    android:visibility="@{editModel.swipeBlockVisibility}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/switchText">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_32"
+                        android:background="@drawable/bg_swipe_left"
+                        android:gravity="center|start"
+                        android:orientation="horizontal"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="@dimen/dp_16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.32">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/ic_left_white_24dp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_action_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_underline"
+                            android:ellipsize="end"
+                            android:foregroundGravity="right|top"
+                            android:paddingHorizontal="@dimen/dp_4"
+                            android:paddingBottom="@dimen/dp_2"
+                            android:singleLine="true"
+                            android:text="@{editModel.leftActionName}"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_32"
+                        android:background="@drawable/bg_swipe_right"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.66">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginEnd="@dimen/dp_4"
+                            android:layout_weight="0"
+                            android:text="@string/catalog_copy"
+                            android:textColor="@color/gray_80" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_action_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:background="@drawable/bg_underline"
+                            android:ellipsize="end"
+                            android:paddingHorizontal="@dimen/dp_4"
+                            android:paddingBottom="@dimen/dp_2"
+                            android:singleLine="true"
+                            android:text="@{editModel.rightActionName}"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp_4"
+                            app:srcCompat="@drawable/ic_right_white_24dp" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorBackground"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/infoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Эта коллекция пуста. Вы можете перейти в другую коллекцию и скопировать карточки оттуда."
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cards"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/colorBackground"
+                android:paddingTop="@dimen/dp_8"
+                android:scrollbars="vertical"
+                android:visibility="@{editModel.empty ? View.GONE : View.VISIBLE}" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_pb_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_50"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:layout_gravity="bottom|end">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:backgroundTint="?attr/colorAccent"
+                app:fabSize="mini"
+                app:maxImageSize="20dp"
+                app:srcCompat="@drawable/ic_add_box_black_24dp"
+                app:tint="@color/white"
+                android:layout_marginBottom="@dimen/dp_8"
+                tools:ignore="ContentDescription" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:backgroundTint="?attr/colorTestAccent"
+                app:srcCompat ="@drawable/ic_test"
+                app:tint="@color/white"
+                android:layout_marginBottom="@dimen/dp_16"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

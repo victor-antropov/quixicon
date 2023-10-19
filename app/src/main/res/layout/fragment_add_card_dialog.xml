@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dp_8"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_dialog_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/add_card"
+                android:textColor="?attr/colorOnSurface"
+                android:textAllCaps="true"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:tint="?attr/colorDialogAccent"
+                android:onClick="@{onClickListener::onClick}"
+                app:srcCompat="@drawable/ic_x" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:onClick="@{onClickListener::onClick}"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/bg_circle_outline"
+                android:backgroundTint="?attr/colorDialogAccent"
+                android:padding="@dimen/dp_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="?attr/colorDialogAccent"
+                    app:srcCompat="@drawable/ic_arrow_forward_header_24dp" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center_vertical"
+                android:text="@string/card_copy_dictionary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:onClick="@{onClickListener::onClick}"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/bg_circle_outline"
+                android:backgroundTint="?attr/colorDialogAccent"
+                android:padding="@dimen/dp_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="?attr/colorDialogAccent"
+                    app:srcCompat="@drawable/ic_add_box_black_24dp" />
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center_vertical"
+                android:text="@string/card_copy_new" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

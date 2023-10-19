@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorBackground" format="color|reference" />
+
+    <attr name="colorTestAccent" format="color|reference" />
+    <attr name="colorTestAccentDark" format="color|reference" />
+    <attr name="colorTestAccentVariant" format="color|reference" />
+
+    <attr name="colorTestBgUp" format="color|reference" />
+    <attr name="colorTestBgDown" format="color|reference" />
+    <attr name="colorTestBgRight" format="color|reference" />
+    <attr name="colorTestBgLeft" format="color|reference" />
+
+    <attr name="colorCardHeaderArrow" format="color|reference" />
+
+    <attr name="colorCardFooter" format="color|reference" />
+    <attr name="colorCardTextWord" format="color|reference" />
+    <attr name="colorCardTextPhonetics" format="color|reference" />
+
+    <attr name="colorAccentWord" format="color|reference" />
+    <attr name="colorAccentPhrase" format="color|reference" />
+    <attr name="colorAccentRule" format="color|reference" />
+
+    <attr name="colorDialogAccent" format="color|reference" />
+    <attr name="colorDialogSurfaceVariant" format="color|reference" />
+
+    <attr name="colorDivider" format="color|reference" />
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_hint_original"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_128"
+        android:gravity="center"
+        android:textSize="@dimen/sp_18"
+        android:autoSizeMaxTextSize="100sp"
+        android:background="?attr/colorDialogSurfaceVariant"
+        android:paddingVertical="@dimen/dp_8"
+        android:autoSizeTextType="uniform"
+        android:textColor="?attr/colorOnSurface"
+        android:text="中国"
+        android:paddingHorizontal="@dimen/dp_16"
+        />
+</FrameLayout>
